@@ -1320,13 +1320,70 @@
     footer a:hover {
         text-decoration: underline;
     }
+    /* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff; /* Color of the hamburger lines */
+    margin: 3px 0;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    display: flex; /* Default to flex for desktop */
+}
+
+.nav-menu ul {
+    display: flex; /* Horizontal layout for desktop */
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger on mobile */
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position it absolutely */
+        top: 80px; /* Adjust based on header height */
+        left: 0;
+        right: 0;
+        background-color: #013220; /* Background color for the menu */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    .nav-menu ul {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Add some padding */
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0; /* Space between items */
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+}
 </style>
 <div class="kichwa">
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
         <a href="#">
             <img src="logo.png" alt="Company Logo" style="height: 50px;"> <b>SKYFIELD AEROTECH</b>
         </a>
-        <nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="nav-menu" class="nav-menu">
             <ul style="list-style-type: none; display: flex; gap: 20px; margin: 0; padding: 0;">
                 <li><a href="#services" style="color: whitesmoke; text-decoration: none;">Services</a></li>
                 <li><a href="#core-values" style="color: whitesmoke; text-decoration: none;">Core Values</a></li>
@@ -1338,6 +1395,23 @@
             </ul>
         </nav>
     </header>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-menu a'); // Select all navigation links
+    
+        // Toggle the menu when the hamburger icon is clicked
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active'); // Toggle the active class
+        });
+    
+        // Close the menu when a navigation link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active'); // Remove the active class to close the menu
+            });
+        });
+    </script>
 </div>
 
 <body>
