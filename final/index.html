@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Skyfield Aerotech Services</title>
     <link rel="stylesheet" href="team.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -125,6 +123,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
+    
 }
 
 .card-container {
@@ -521,11 +520,9 @@ body {
 
     /* Left Column (Image) */
     .impact-content img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%; /* Ensure images are responsive */
+    height: auto;
+    max-width: 100%; /* Prevent overflow */
     }
 
     /* Right Column (Text) */
@@ -698,18 +695,36 @@ body {
         }
 
         .form-container input,
-        .form-container select,
-        .form-container textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 15px; /* Increase padding for better usability */
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 18px; /* Increase font size for better readability */
+}
+@media screen and (max-width: 768px) {
+    .core-values-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
 
-        .form-container input:focus,
+    .about-features-grid {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center content */
+    }
+
+    .card {
+        width: 100%; /* Full width on small screens */
+        max-width: 100%; /* Remove max-width */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .header h1 {
+        font-size: 1.2rem; /* Adjust header font size for smaller screens */
+    }
+}
+        -container input:focus,
         .form-container select:focus,
         .form-container textarea:focus {
             border-color: #2e8b57; /* Green focus */
@@ -888,11 +903,12 @@ body {
 
         /* Body Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            padding-top: 80px; /* Adjust based on the header height */
-        }
+    margin: 0;
+    padding-top: 80px; /* Adjust this value based on the height of your header */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
         /* Header */
         .header {
@@ -915,22 +931,24 @@ body {
         /* Container for Layout */
         .container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-            margin-top: 100px; /* Space for header */
+    flex-wrap: wrap; /* Allow cards to wrap to new rows */
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
         }
 
         .card {
-            width: 100%;
-            max-width: 350px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            padding: 20px;
+            width: 100%; /* Make it responsive */
+    max-width: 500px; /* Limit the card width */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    color: #333333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
         }
 
         .card h2 {
