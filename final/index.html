@@ -1349,9 +1349,18 @@ body {
         <script>
             const hamburger = document.getElementById('hamburger');
             const navMenu = document.getElementById('nav-menu');
+            const navLinks = document.querySelectorAll('.nav-menu a'); // Select all navigation links
         
+            // Toggle the menu when the hamburger icon is clicked
             hamburger.addEventListener('click', () => {
                 navMenu.classList.toggle('active'); // Toggle the active class
+            });
+        
+            // Close the menu when a navigation link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active'); // Remove the active class to close the menu
+                });
             });
         </script>
     </header>
@@ -1362,7 +1371,7 @@ body {
     <div class="canva"> 
 
         <div id="textContainer">
-          <div id="title">WELCOME TO SKYFIELD AEROTECH!</div>
+          <div id="title">WELCOME TO SKYFIELD AEROTECH!!</div>
           <div id="subtitle">Your Caring Partner</div>
         </div>
       
