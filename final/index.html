@@ -1320,7 +1320,7 @@
     footer a:hover {
         text-decoration: underline;
     }
-    /* Hamburger Menu Styles */
+ /* Hamburger Menu Styles */
 .hamburger {
     display: none; /* Hidden by default */
     flex-direction: column;
@@ -1343,6 +1343,7 @@
     display: flex; /* Horizontal layout for desktop */
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
     .hamburger {
         display: flex; /* Show hamburger on mobile */
@@ -1351,25 +1352,40 @@
     .nav-menu {
         display: none; /* Hide menu by default on mobile */
         flex-direction: column; /* Stack items vertically */
-        position: absolute; /* Position it absolutely */
-        top: 80px; /* Adjust based on header height */
-        left: 0;
-        right: 0;
+        position: fixed; /* Position it fixed */
+        top: 0; /* Align to the top */
+        right: 0; /* Slide in from the right */
+        width: 250px; /* Set a width for the menu */
+        height: 100%; /* Full height */
         background-color: #013220; /* Background color for the menu */
         z-index: 1000; /* Ensure it appears above other content */
-    }
-
-    .nav-menu ul {
-        flex-direction: column; /* Stack items vertically */
-        padding: 10px; /* Add some padding */
-    }
-
-    .nav-menu ul li {
-        margin: 10px 0; /* Space between items */
+        padding: 20px; /* Add padding */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+        transition: transform 0.3s ease; /* Smooth transition */
+        transform: translateX(100%); /* Start off-screen */
     }
 
     .nav-menu.active {
         display: flex; /* Show menu when active */
+        transform: translateX(0); /* Slide in */
+    }
+
+    .nav-menu ul {
+        flex-direction: column; /* Stack items vertically */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+
+    .nav-menu ul li {
+        margin: 15px 0; /* Space between items */
+        font-family: 'Raleway', sans-serif; /* Use a different font */
+        font-size: 1.2rem; /* Adjust font size */
+        color: #fff; /* Text color */
+        transition: color 0.3s; /* Smooth color transition */
+    }
+
+    .nav-menu ul li:hover {
+        color: #00ff00; /* Change color on hover */
     }
 }
 </style>
