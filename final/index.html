@@ -118,53 +118,72 @@
     }
 
     /* Card Styles */
+.card {
+    width: 100%; /* Makes the card width relative */
+    max-width: 500px; /* Limits the card's max width */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideIn 1s ease-out;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card.left {
+    background-color: #00ff00;
+    color: #ffffff;
+    transform: translateX(-50px);
+}
+
+.card.right {
+    background-color: #ffffff;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(50px);
+    padding: 40px 20px;
+}
+
+.card.right h2 {
+    color: #00ff00;
+    margin-bottom: 20px;
+}
+
+.card.right p {
+    margin: 0;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
     .card {
-        width: 500px;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        animation: slideIn 1s ease-out;
+        width: 100%;  /* Full width on small screens */
+        max-width: none;  /* Remove max width */
     }
 
-    .card h2 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
+    .card.left, .card.right {
+        transform: none;  /* Remove translation on small screens */
+        padding: 20px 10px;  /* Adjust padding */
     }
 
-    .card.left {
-        background-color: #00ff00;
-        color: #ffffff;
-        transform: translateX(-50px);
-     
-    }
-
-    .card.right {
-        background-color: #ffffff;
-        color: #333333;
+    .card-container {
         display: flex;
-        flex-direction: column;
-
-        transform: translateX(50px);
-        padding: 40px 20px;
+        flex-wrap: wrap;  /* Wrap the cards on smaller screens */
+        justify-content: space-between;
     }
+}
 
-    .card.right h2 {
-        color: #00ff00;
-        margin-bottom: 20px;
-    }
-
-    .card.right p {
-        margin: 0;
-        line-height: 1.8;
-        font-size: 1rem;
-    }
-
-    /* Hover Effects */
-    .card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
 
     /* General Styles */
     booking-process {
@@ -1257,7 +1276,7 @@
                     <img src="https://res.cloudinary.com/dokqdcgwy/image/upload/v1730718134/IMG-20241104-WA0015_1_vgo46l.jpg"
                         alt="" style="width:100%">
                     <div class="w3-container">
-                        <h3>Swabir M. Bwanake</h3>
+                        <h3>Swabir M. Bwana</h3>
                         <p class="w3-opacity">Co-Founder | CFO | Hanover, US |</p>
                         <p>Swabir M. Bwana handles finances and leads our recruiting efforts to build the right team at
                             Skyfield Aerotech. His strategic approach ensures we have the expertise and talent needed to
@@ -1318,7 +1337,7 @@
                 <div class="w3-card">
                     <img src="adan.jpg" alt="" style="width:100%">
                     <div class="w3-container">
-                        <h3>Adan Ali Wako</h3>
+                        <h3>Adan Ali Wako L.</h3>
                         <p class="w3-opacity">Co-Founder | CITO | Nairobi, Kenya |</p>
                         <p>Adan Ali Wako spearheads all technology and IT operations at Skyfield Aerotech as the Chief
                             Information and Technology Officer (CITO). With a keen eye for innovation, Adan ensures the
