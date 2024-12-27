@@ -903,6 +903,46 @@ footer p {
 footer .social-icons a {
     font-size: 16px;
 }
+.skyfield-section {
+    margin-bottom: 20px; /* Adds space below the section */
+}
+
+.following-section {
+    padding-top: 20px; /* Adds space above the following section */
+}
+.section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Ensures there is space between columns */
+}
+
+.skyfield-section,
+.following-section {
+    flex: 1; /* Allows both sections to take equal space */
+}
+.skyfield-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.following-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .skyfield-section, .following-section {
+        flex: 100%; /* Stack sections vertically on smaller screens */
+    }
+}
+.skyfield-section {
+    position: relative;
+    z-index: 1; /* Ensures it stays in its proper place in the stacking context */
+}
+
+.following-section {
+    position: relative;
+    z-index: 1;
+}
 
 </style>
 <div class="kichwa">
@@ -929,7 +969,7 @@ footer .social-icons a {
     <div class="canva"> 
 
         <div id="textContainer">
-          <div id="title">WELCOME TO SKYFIELD AEROTECH</div>
+          <div id="title">WELCOME TO SKYFIELD AEROTECH!</div>
           <div id="subtitle">Your Caring Partner</div>
         </div>
       
