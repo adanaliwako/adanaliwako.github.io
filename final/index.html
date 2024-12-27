@@ -771,179 +771,42 @@
             color: #d4e8d1;
             text-decoration: underline;
         }
-        /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Container */
-.container {
-    display: flex;
-    gap: 20px;
-    animation: fadeIn 2s ease-in;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
-}
-
-/* Core Values Grid */
-.core-values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Card Styles */
-.card {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideIn 1s ease-out;
-}
-
-/* Card Hover Effects */
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Media Queries for Responsiveness */
-@media screen and (max-width: 768px) {
-    /* Core Values Grid */
-    .core-values-grid {
-        grid-template-columns: 1fr; /* Stack cards vertically */
-    }
-
-    /* Adjust the width of cards */
-    .card {
-        max-width: 100%;
-        padding: 15px;
-    }
-
-    /* Adjust text sizes */
-    .core-value-card h2, .card h2 {
-        font-size: 1.4rem;
-    }
-
-    /* Adjust image sizes */
-    .info-image img {
-        width: 80%;
-    }
-
-    /* Adjust the form container */
-    .form-container {
-        width: 90%;
-    }
-
-    /* Impact Content Layout */
-    .impact-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Adjust the About Card */
-    .about-card {
-        max-width: 90%;
-    }
-}
-
-/* Additional Improvements for Other Layouts */
-
-/* Responsive Adjustments for Small Screens */
-@media screen and (max-width: 600px) {
-    .booking-steps {
-        flex-direction: column;
-    }
-
-    .about-features-grid {
-        flex-direction: column;
-    }
-
-    .team-container {
-        flex-direction: column;
-    }
-
-    .info-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-container.w3-bar .w3-button {
-        padding: 12px; /* Adjust button padding on small screens */
-    }
-}
-
-/* Adjust Footer for Small Screens */
-footer {
-    padding: 10px;
-    font-size: 14px;
-}
-
-footer h2 {
-    font-size: 18px;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-footer .social-icons a {
-    font-size: 16px;
-}
-.skyfield-section {
-    margin-bottom: 20px; /* Adds space below the section */
-}
-
-.following-section {
-    padding-top: 20px; /* Adds space above the following section */
-}
-.section-wrapper {
+        /* Service Section */
+.service-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Ensures there is space between columns */
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;  /* Space below service section */
 }
 
-.skyfield-section,
-.following-section {
-    flex: 1; /* Allows both sections to take equal space */
-}
-.skyfield-text {
-    font-size: 18px;
-    line-height: 1.6;
+.service-card {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-.following-text {
-    font-size: 18px;
-    line-height: 1.6;
+/* Core Values Section */
+.core-values-section {
+    padding-top: 40px;
+    margin-top: 40px;  /* Adds margin to ensure it doesn't overlap with service section */
 }
+
+/* Mobile View */
 @media (max-width: 768px) {
-    .skyfield-section, .following-section {
-        flex: 100%; /* Stack sections vertically on smaller screens */
+    .service-container {
+        flex-direction: column;  /* Stacks the service cards vertically */
+    }
+
+    .core-values-section {
+        padding-top: 20px;  /* Adjust space for small screens */
     }
 }
-.skyfield-section {
-    position: relative;
-    z-index: 1; /* Ensures it stays in its proper place in the stacking context */
-}
 
-.following-section {
-    position: relative;
-    z-index: 1;
-}
-
+        
 </style>
 <div class="kichwa">
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
@@ -969,7 +832,7 @@ footer .social-icons a {
     <div class="canva"> 
 
         <div id="textContainer">
-          <div id="title">WELCOME TO SKYFIELD AEROTECH!</div>
+          <div id="title">WELCOME TO SKYFIELD AEROTECH!!</div>
           <div id="subtitle">Your Caring Partner</div>
         </div>
       
