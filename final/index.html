@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skyfield Aerotech Services</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="team.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -772,6 +771,139 @@
             color: #d4e8d1;
             text-decoration: underline;
         }
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container */
+.container {
+    display: flex;
+    gap: 20px;
+    animation: fadeIn 2s ease-in;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+}
+
+/* Core Values Grid */
+.core-values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styles */
+.card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideIn 1s ease-out;
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Core Values Grid */
+    .core-values-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+    }
+
+    /* Adjust the width of cards */
+    .card {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    /* Adjust text sizes */
+    .core-value-card h2, .card h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Adjust image sizes */
+    .info-image img {
+        width: 80%;
+    }
+
+    /* Adjust the form container */
+    .form-container {
+        width: 90%;
+    }
+
+    /* Impact Content Layout */
+    .impact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust the About Card */
+    .about-card {
+        max-width: 90%;
+    }
+}
+
+/* Additional Improvements for Other Layouts */
+
+/* Responsive Adjustments for Small Screens */
+@media screen and (max-width: 600px) {
+    .booking-steps {
+        flex-direction: column;
+    }
+
+    .about-features-grid {
+        flex-direction: column;
+    }
+
+    .team-container {
+        flex-direction: column;
+    }
+
+    .info-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-container.w3-bar .w3-button {
+        padding: 12px; /* Adjust button padding on small screens */
+    }
+}
+
+/* Adjust Footer for Small Screens */
+footer {
+    padding: 10px;
+    font-size: 14px;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer .social-icons a {
+    font-size: 16px;
+}
+
 </style>
 <div class="kichwa">
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
@@ -797,7 +929,7 @@
     <div class="canva"> 
 
         <div id="textContainer">
-          <div id="title">WELCOME TO SKYFIELD AEROTECH!</div>
+          <div id="title">WELCOME TO SKYFIELD AEROTECH</div>
           <div id="subtitle">Your Caring Partner</div>
         </div>
       
