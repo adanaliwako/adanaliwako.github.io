@@ -117,15 +117,35 @@
         }
     }
 
-    /* Card Styles */
+    /* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow cards to wrap to new rows */
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+/* Card Styles */
 .card {
-    width: 100%; /* Makes the card width relative */
-    max-width: 500px; /* Limits the card's max width */
+    width: 100%; /* Make it responsive */
+    max-width: 500px; /* Limit the card width */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideIn 1s ease-out;
+    background-color: #ffffff;
+    color: #333333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .card h2 {
@@ -136,16 +156,12 @@
 .card.left {
     background-color: #00ff00;
     color: #ffffff;
-    transform: translateX(-50px);
 }
 
 .card.right {
     background-color: #ffffff;
     color: #333333;
-    display: flex;
-    flex-direction: column;
-    transform: translateX(50px);
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 .card.right h2 {
@@ -166,21 +182,59 @@
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .card {
-        width: 100%;  /* Full width on small screens */
-        max-width: none;  /* Remove max width */
+@media (max-width: 1200px) {
+    .card-container {
+        justify-content: space-between; /* Adjust card spacing on medium screens */
     }
+}
 
-    .card.left, .card.right {
-        transform: none;  /* Remove translation on small screens */
-        padding: 20px 10px;  /* Adjust padding */
+@media (max-width: 992px) {
+    .card {
+        max-width: 80%; /* Ensure the card doesn't stretch too wide */
     }
 
     .card-container {
-        display: flex;
-        flex-wrap: wrap;  /* Wrap the cards on smaller screens */
-        justify-content: space-between;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Full width on small screens */
+        max-width: 100%;  /* Remove max-width */
+        padding: 15px 10px;  /* Adjust padding */
+    }
+
+    .card-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center content */
+    }
+
+    .card.left, .card.right {
+        transform: none;  /* Remove translation effects on small screens */
+        margin-bottom: 20px; /* Add space between stacked cards */
+    }
+
+    .card.right h2 {
+        font-size: 1.4rem; /* Reduce font size for better readability */
+    }
+
+    .card.right p {
+        font-size: 0.9rem; /* Adjust text size for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 10px 5px;  /* Further reduce padding for very small screens */
+    }
+
+    .card.right h2 {
+        font-size: 1.2rem; /* Reduce heading size for smaller screens */
+    }
+
+    .card.right p {
+        font-size: 0.8rem; /* Adjust text size for very small screens */
     }
 }
 
@@ -1337,7 +1391,7 @@
                 <div class="w3-card">
                     <img src="adan.jpg" alt="" style="width:100%">
                     <div class="w3-container">
-                        <h3>Adan Ali Wako L.</h3>
+                        <h3>Adan Ali Wako</h3>
                         <p class="w3-opacity">Co-Founder | CITO | Nairobi, Kenya |</p>
                         <p>Adan Ali Wako spearheads all technology and IT operations at Skyfield Aerotech as the Chief
                             Information and Technology Officer (CITO). With a keen eye for innovation, Adan ensures the
