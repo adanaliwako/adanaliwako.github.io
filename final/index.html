@@ -877,7 +877,191 @@ body {
         padding-top: 20px;  /* Adjust space for small screens */
     }
 }
+/* General Reset */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding-top: 80px; /* Adjust based on the header height */
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: #013220; /* Dark green background */
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+        }
+
+        /* Container for Layout */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            margin-top: 100px; /* Space for header */
+        }
+
+        .card {
+            width: 100%;
+            max-width: 350px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card h2 {
+            color: #00ff00;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1200px) {
+            .container {
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .card {
+                max-width: 80%;
+            }
+
+            .container {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1rem;
+            }
+        }
+
+        /* Core Values Section */
+        .core-values-container {
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .core-values-container h1 {
+            font-size: 2rem;
+            color: #013220;
+            margin-bottom: 20px;
+        }
+
+        .core-values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .core-value-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .core-value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .core-value-card .icon {
+            font-size: 2rem;
+            color: #00ff00;
+            margin-bottom: 10px;
+        }
+
+        .core-value-card h2 {
+            font-size: 1.5rem;
+            color: #00ff00;
+            margin-bottom: 10px;
+        }
+
+        .core-value-card p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        @media screen and (max-width: 768px) {
+            .core-values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #013220;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
         
 </style>
 <div class="kichwa">
@@ -904,7 +1088,7 @@ body {
     <div class="canva"> 
 
         <div id="textContainer">
-          <div id="title">WELCOME TO SKYFIELD AEROTECH!!</div>
+          <div id="title">WELCOME TO SKYFIELD AEROTECH!</div>
           <div id="subtitle">Your Caring Partner</div>
         </div>
       
