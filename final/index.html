@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
+    /* Team Member Image Styles */
+    .w3-card img {
+        width: 100%;
+        /* Make the image responsive */
+        height: 350px;
+        /* Set a fixed height for uniformity */
+        object-fit: cover;
+        /* Ensure the image covers the area without distortion */
+        border-radius: 10px;
+        /* Optional: Add border radius for aesthetics */
+    }
+
     .card.left {
         background-color: #013220;
         color: #ffffff;
@@ -297,15 +309,21 @@
         gap: 10px;
         /* Reduced gap between columns */
     }
-    .info-image {
-    margin: 20px 0; /* Add some margin for spacing */
-}
 
-.info-image video {
-    width: 100%; /* Ensure the video takes full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: Add border radius for aesthetics */
-}
+    .info-image {
+        margin: 20px 0;
+        /* Add some margin for spacing */
+    }
+
+    .info-image video {
+        width: 100%;
+        /* Ensure the video takes full width of the container */
+        height: auto;
+        /* Maintain aspect ratio */
+        border-radius: 10px;
+        /* Optional: Add border radius for aesthetics */
+    }
+
     .column {
         flex: 1;
         max-width: 45%;
@@ -581,28 +599,41 @@
             max-width: 90%;
         }
     }
+
     .impact-content {
-    display: flex; /* Use flexbox to align video and text side by side */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    justify-content: center; /* Center content */
-    gap: 20px; /* Space between video and text */
-}
+        display: flex;
+        /* Use flexbox to align video and text side by side */
+        flex-wrap: wrap;
+        /* Allow wrapping on smaller screens */
+        justify-content: center;
+        /* Center content */
+        gap: 20px;
+        /* Space between video and text */
+    }
 
-.impact-content video {
-    margin-top: 150px;
-    width: 90%; /* Ensure the video takes full width of the column */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 300px; /* Set a maximum height for the video */
-    border-radius: 10px; /* Optional: Add border radius for aesthetics */
-}
+    .impact-content video {
+        margin-top: 150px;
+        width: 90%;
+        /* Ensure the video takes full width of the column */
+        height: auto;
+        /* Maintain aspect ratio */
+        max-height: 300px;
+        /* Set a maximum height for the video */
+        border-radius: 10px;
+        /* Optional: Add border radius for aesthetics */
+    }
 
-.impact-card {
-    flex: 1; /* Allow the text column to grow */
-    min-width: 300px; /* Set a minimum width for the text column */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center text vertically */
-}
+    .impact-card {
+        flex: 1;
+        /* Allow the text column to grow */
+        min-width: 300px;
+        /* Set a minimum width for the text column */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* Center text vertically */
+    }
+
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -1350,74 +1381,104 @@
     footer a:hover {
         text-decoration: underline;
     }
- /* Hamburger Menu Styles */
-.hamburger {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    cursor: pointer;
-}
 
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background-color: #fff; /* Color of the hamburger lines */
-    margin: 3px 0;
-}
-
-/* Navigation Menu Styles */
-.nav-menu {
-    display: flex; /* Default to flex for desktop */
-}
-
-.nav-menu ul {
-    display: flex; /* Horizontal layout for desktop */
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
+    /* Hamburger Menu Styles */
     .hamburger {
-        display: flex; /* Show hamburger on mobile */
+        display: none;
+        /* Hidden by default */
+        flex-direction: column;
+        cursor: pointer;
     }
 
+    .hamburger span {
+        height: 3px;
+        width: 25px;
+        background-color: #fff;
+        /* Color of the hamburger lines */
+        margin: 3px 0;
+    }
+
+    /* Navigation Menu Styles */
     .nav-menu {
-        display: none; /* Hide menu by default on mobile */
-        flex-direction: column; /* Stack items vertically */
-        position: fixed; /* Position it fixed */
-        top: 0; /* Align to the top */
-        right: 0; /* Slide in from the right */
-        width: 250px; /* Set a width for the menu */
-        height: 100%; /* Full height */
-        background-color: #013220; /* Background color for the menu */
-        z-index: 1000; /* Ensure it appears above other content */
-        padding: 20px; /* Add padding */
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
-        transition: transform 0.3s ease; /* Smooth transition */
-        transform: translateX(100%); /* Start off-screen */
-    }
-
-    .nav-menu.active {
-        display: flex; /* Show menu when active */
-        transform: translateX(0); /* Slide in */
+        display: flex;
+        /* Default to flex for desktop */
     }
 
     .nav-menu ul {
-        flex-direction: column; /* Stack items vertically */
-        padding: 0; /* Remove padding */
-        margin: 0; /* Remove margin */
+        display: flex;
+        /* Horizontal layout for desktop */
     }
 
-    .nav-menu ul li {
-        margin: 15px 0; /* Space between items */
-        font-family: 'Raleway', sans-serif; /* Use a different font */
-        font-size: 1.2rem; /* Adjust font size */
-        color: #fff; /* Text color */
-        transition: color 0.3s; /* Smooth color transition */
-    }
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: flex;
+            /* Show hamburger on mobile */
+        }
 
-    .nav-menu ul li:hover {
-        color: #00ff00; /* Change color on hover */
+        .nav-menu {
+            display: none;
+            /* Hide menu by default on mobile */
+            flex-direction: column;
+            /* Stack items vertically */
+            position: fixed;
+            /* Position it fixed */
+            top: 0;
+            /* Align to the top */
+            right: 0;
+            /* Slide in from the right */
+            width: 250px;
+            /* Set a width for the menu */
+            height: 100%;
+            /* Full height */
+            background-color: #013220;
+            /* Background color for the menu */
+            z-index: 1000;
+            /* Ensure it appears above other content */
+            padding: 20px;
+            /* Add padding */
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+            /* Add shadow for depth */
+            transition: transform 0.3s ease;
+            /* Smooth transition */
+            transform: translateX(100%);
+            /* Start off-screen */
+        }
+
+        .nav-menu.active {
+            display: flex;
+            /* Show menu when active */
+            transform: translateX(0);
+            /* Slide in */
+        }
+
+        .nav-menu ul {
+            flex-direction: column;
+            /* Stack items vertically */
+            padding: 0;
+            /* Remove padding */
+            margin: 0;
+            /* Remove margin */
+        }
+
+        .nav-menu ul li {
+            margin: 15px 0;
+            /* Space between items */
+            font-family: 'Raleway', sans-serif;
+            /* Use a different font */
+            font-size: 1.2rem;
+            /* Adjust font size */
+            color: #fff;
+            /* Text color */
+            transition: color 0.3s;
+            /* Smooth color transition */
+        }
+
+        .nav-menu ul li:hover {
+            color: #00ff00;
+            /* Change color on hover */
+        }
     }
-}
 </style>
 <div class="kichwa">
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
@@ -1445,12 +1506,12 @@
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
         const navLinks = document.querySelectorAll('.nav-menu a'); // Select all navigation links
-    
+
         // Toggle the menu when the hamburger icon is clicked
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active'); // Toggle the active class
         });
-    
+
         // Close the menu when a navigation link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -1708,56 +1769,65 @@
     </div>
     <!--booking-->
     <!-- Booking Section -->
-<div class="booking-process" id="booking">
-    <header class="booking-header">
-        <h1>How to book our services</h1>
-    </header>
-    <div class="booking-steps">
-        <div class="column">
-            <div class="step">
-                <h2>1. Explore Our Services</h2>
-                <p>Visit our website and browse through the range of services we offer, from fertilizer application to crop management consulting, and more.</p>
+    <div class="booking-process" id="booking">
+        <header class="booking-header">
+            <h1>How to book our services</h1>
+        </header>
+        <div class="booking-steps">
+            <div class="column">
+                <div class="step">
+                    <h2>1. Explore Our Services</h2>
+                    <p>Visit our website and browse through the range of services we offer, from fertilizer application
+                        to crop management consulting, and more.</p>
+                </div>
+                <div class="step">
+                    <h2>2. Contact Us</h2>
+                    <p>Reach out to our team by email at <a style="color: red;"
+                            href="mailto:skyfield.kenya@gmail.com">skyfield.kenya@gmail.com</a> or call us directly at
+                        <a style="color: red;" href="tel:0115037380">0115037380</a> to discuss your specific needs and
+                        requirements.</p>
+                </div>
+                <div class="step">
+                    <h2>3. Consultation</h2>
+                    <p>Our experts will schedule a consultation to understand your farming goals, challenges, and the
+                        best solutions we can provide to optimize your crop performance.</p>
+                </div>
             </div>
-            <div class="step">
-                <h2>2. Contact Us</h2>
-                <p>Reach out to our team by email at <a style="color: red;" href="mailto:skyfield.kenya@gmail.com">skyfield.kenya@gmail.com</a> or call us directly at <a style="color: red;" href="tel:0115037380">0115037380</a> to discuss your specific needs and requirements.</p>
-            </div>
-            <div class="step">
-                <h2>3. Consultation</h2>
-                <p>Our experts will schedule a consultation to understand your farming goals, challenges, and the best solutions we can provide to optimize your crop performance.</p>
+            <div class="column">
+                <div class="step">
+                    <h2>4. Customized Plan</h2>
+                    <p>After understanding your needs, we will create a tailored service plan that best suits your
+                        agricultural requirements, ensuring maximum efficiency and results.</p>
+                </div>
+                <div class="step">
+                    <h2>5. Schedule the Service</h2>
+                    <p>Once you're happy with the plan, we'll set a convenient time to carry out the service. Our team
+                        will confirm all details and ensure everything is ready for the service to begin.</p>
+                </div>
+                <div class="step">
+                    <h2>6. Confirmation and Service Execution</h2>
+                    <p>You will receive a confirmation email or phone call, and on the scheduled date, our team will
+                        arrive to deliver the service with precision and care.</p>
+                </div>
             </div>
         </div>
-        <div class="column">
-            <div class="step">
-                <h2>4. Customized Plan</h2>
-                <p>After understanding your needs, we will create a tailored service plan that best suits your agricultural requirements, ensuring maximum efficiency and results.</p>
-            </div>
-            <div class="step">
-                <h2>5. Schedule the Service</h2>
-                <p>Once you're happy with the plan, we'll set a convenient time to carry out the service. Our team will confirm all details and ensure everything is ready for the service to begin.</p>
-            </div>
-            <div class="step">
-                <h2>6. Confirmation and Service Execution</h2>
-                <p>You will receive a confirmation email or phone call, and on the scheduled date, our team will arrive to deliver the service with precision and care.</p>
+        <div class="additional-section">
+            <button class="non-clickable-button">Your Trusted Company!</button>
+            <div class="info-content">
+                <div class="info-text">
+                    <p style="color: #013220;">Did you know Skyfield's drones can cover 30 acres an hour, making them 30 times faster than
+                        manual spraying?</p>
+                </div>
+                <div class="info-image">
+                    <!-- Replace the drone image with the video -->
+                    <video width="100%" autoplay loop muted>
+                        <source src="kwansa.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
     </div>
-    <div class="additional-section">
-        <button class="non-clickable-button">Your Trusted Company!</button>
-        <div class="info-content">
-            <div class="info-text">
-                <p>Did you know Skyfield's drones can cover 30 acres an hour, making them 30 times faster than manual spraying?</p>
-            </div>
-            <div class="info-image">
-                <!-- Replace the drone image with the video -->
-                <video width="100%" autoplay loop muted>
-                    <source src="kwansa.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-</div>
     <!--about Skyfield-->
     <section class="about-container" id="about">
         <h2>Skyfield Aerotech offers:</h2>
@@ -1820,7 +1890,7 @@
     <!--impact-->
     <section class="impact-container" id="impact">
         <h2><em>Cultivating Impact:</em> Empowering Communities Through Innovation</h2>
-    
+
         <div class="impact-content">
             <!-- Left Column (Video) -->
             <div>
@@ -1829,7 +1899,7 @@
                     Your browser does not support the video tag.
                 </video>
             </div>
-    
+
             <!-- Right Column (Text) -->
             <div class="impact-card">
                 <p>At Skyfield Aerotech, we are passionate about making a real difference in farming communities. We use
@@ -1839,7 +1909,7 @@
                     work closely with communities, offering training and support to help them make the most of these
                     innovations. By empowering farmers with knowledge and tools, we are helping them thrive in a
                     changing world while staying connected to their roots.</p>
-    
+
                 <p>Together we are creating a future where agriculture is not just about growing crops, but about
                     growing stronger, more resilient communities. Let's plant the seeds for a better tomorrow.</p>
             </div>
@@ -1909,8 +1979,7 @@
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="https://res.cloudinary.com/dokqdcgwy/image/upload/v1731074119/0acf5e33-5502-4fae-8c40-dd2ccc28fa71_rgjaye.jpg"
-                        alt="Dan" style="width:100%">
+                    <img src="kidero.jpg" alt="Dan" style="width:100%">
                     <div class="w3-container">
                         <h3>Evans Mutegi</h3>
                         <p class="w3-opacity">Co-Founder | COO | Nairobi, Kenya |</p>
@@ -1952,7 +2021,7 @@
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="adan.jpg" alt="" style="width:100%">
+                    <img src="adesh.jpg" alt="" style="width:100%">
                     <div class="w3-container">
                         <h3>Adan Ali Wako</h3>
                         <p class="w3-opacity">Co-Founder | CITO | Nairobi, Kenya |</p>
@@ -1964,10 +2033,7 @@
                             forefront of technological advancements.
 
                             Adan is dedicated to building resilient and scalable systems that support the organization’s
-                            goals while prioritizing security and reliability. By fostering collaboration across teams,
-                            he ensures technology solutions are tailored to meet the unique challenges of the aerospace
-                            industry. Adan’s forward-looking leadership cements Skyfield Aerotech’s position as a
-                            technology-driven leader in the field.</p>
+                            goals while prioritizing security and reliability.</p>
                         <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i>
                                 Contact</button></p>
                     </div>
@@ -1984,32 +2050,33 @@
             <form action="submit.php" method="POST">
                 <!-- First Name -->
                 <input type="text" name="first_name" placeholder="First Name" required>
-        
+
                 <!-- Last Name -->
                 <input type="text" name="last_name" placeholder="Last Name" required>
-        
+
                 <!-- Phone Number -->
                 <input type="tel" name="phone_number" placeholder="Phone Number" required>
-        
+
                 <!-- Farm Location -->
                 <input type="text" name="farm_location" placeholder="Farm Location" required>
-        
+
                 <!-- Farm Size -->
                 <input type="text" name="farm_size" placeholder="Farm Size(in acres)" required>
-        
+
                 <!-- Services Checkbox -->
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="services[]" value="Crops Spraying"> Crops Spraying</label>
-                    <label><input type="checkbox" name="services[]" value="Fertilizer Applications"> Fertilizer Applications</label>
+                    <label><input type="checkbox" name="services[]" value="Fertilizer Applications"> Fertilizer
+                        Applications</label>
                     <label><input type="checkbox" name="services[]" value="Crop Monitoring"> Crop Monitoring</label>
                 </div> <br>
                 <label for="message_skyfield"><b>Your Message:</b></label>
                 <textarea name="message_skyfield" rows="5" placeholder="Type here..." required></textarea>
-        
+
                 <!-- Submit Button -->
                 <button type="submit">Submit</button>
             </form>
-        
+
             <!-- Footer -->
             <div class="form-footer">
                 <p>Have questions? <a href="mailto:skyfield.kenya@gmail.com">Contact us</a></p>
