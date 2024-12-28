@@ -291,13 +291,21 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        background-color: #00ff00;
+        background-color: white;
         /* Bright green */
         padding: 20px;
         gap: 10px;
         /* Reduced gap between columns */
     }
+    .info-image {
+    margin: 20px 0; /* Add some margin for spacing */
+}
 
+.info-image video {
+    width: 100%; /* Ensure the video takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add border radius for aesthetics */
+}
     .column {
         flex: 1;
         max-width: 45%;
@@ -310,8 +318,9 @@
     /* Individual Steps */
     .step h2 {
         font-size: 1.4rem;
+        font-weight: bold;
         /* Slightly smaller font for numbers */
-        color: whitesmoke;
+        color: black;
         margin-bottom: 5px;
         /* Reduced margin below the heading */
     }
@@ -572,7 +581,28 @@
             max-width: 90%;
         }
     }
+    .impact-content {
+    display: flex; /* Use flexbox to align video and text side by side */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center content */
+    gap: 20px; /* Space between video and text */
+}
 
+.impact-content video {
+    margin-top: 150px;
+    width: 90%; /* Ensure the video takes full width of the column */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Set a maximum height for the video */
+    border-radius: 10px; /* Optional: Add border radius for aesthetics */
+}
+
+.impact-card {
+    flex: 1; /* Allow the text column to grow */
+    min-width: 300px; /* Set a minimum width for the text column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+}
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -1677,61 +1707,57 @@
         </div>
     </div>
     <!--booking-->
-    <div class="booking-process" id="booking">
-        <header class="booking-header">
-            <h1>How to book our services</h1>
-        </header>
-        <div class="booking-steps">
-            <div class="column">
-                <div class="step">
-                    <h2>1. Explore Our Services</h2>
-                    <p>Visit our website and browse through the range of services we offer, from fertilizer application
-                        to crop management consulting, and more.</p>
-                </div>
-                <div class="step">
-                    <h2>2. Contact Us</h2>
-                    <p>Reach out to our team by email at <a style="color: red;"
-                            href="mailto:skyfield.kenya@gmail.com">skyfield.kenya@gmail.com</a> or call us directly at
-                        <a style="color: red;" href="tel:0115037380">0115037380</a> to discuss your specific needs and requirements.
-                    </p>
-                </div>
-                <div class="step">
-                    <h2>3. Consultation</h2>
-                    <p>Our experts will schedule a consultation to understand your farming goals, challenges, and the
-                        best solutions we can provide to optimize your crop performance.</p>
-                </div>
+    <!-- Booking Section -->
+<div class="booking-process" id="booking">
+    <header class="booking-header">
+        <h1>How to book our services</h1>
+    </header>
+    <div class="booking-steps">
+        <div class="column">
+            <div class="step">
+                <h2>1. Explore Our Services</h2>
+                <p>Visit our website and browse through the range of services we offer, from fertilizer application to crop management consulting, and more.</p>
             </div>
-            <div class="column">
-                <div class="step">
-                    <h2>4. Customized Plan</h2>
-                    <p>After understanding your needs, we will create a tailored service plan that best suits your
-                        agricultural requirements, ensuring maximum efficiency and results.</p>
-                </div>
-                <div class="step">
-                    <h2>5. Schedule the Service</h2>
-                    <p>Once you're happy with the plan, we'll set a convenient time to carry out the service. Our team
-                        will confirm all details and ensure everything is ready for the service to begin.</p>
-                </div>
-                <div class="step">
-                    <h2>6. Confirmation and Service Execution</h2>
-                    <p>You will receive a confirmation email or phone call, and on the scheduled date, our team will
-                        arrive to deliver the service with precision and care.</p>
-                </div>
+            <div class="step">
+                <h2>2. Contact Us</h2>
+                <p>Reach out to our team by email at <a style="color: red;" href="mailto:skyfield.kenya@gmail.com">skyfield.kenya@gmail.com</a> or call us directly at <a style="color: red;" href="tel:0115037380">0115037380</a> to discuss your specific needs and requirements.</p>
+            </div>
+            <div class="step">
+                <h2>3. Consultation</h2>
+                <p>Our experts will schedule a consultation to understand your farming goals, challenges, and the best solutions we can provide to optimize your crop performance.</p>
             </div>
         </div>
-        <div class="additional-section">
-            <button class="non-clickable-button">Your Trusted Company!</button>
-            <div class="info-content">
-                <div class="info-text">
-                    <p>Did you know Skyfield's drones can cover 30 acres an hour, making them 30 times faster than
-                        manual spraying?</p>
-                </div>
-                <div class="info-image">
-                    <img src="drone_icon.jpg" alt="Drone Icon">
-                </div>
+        <div class="column">
+            <div class="step">
+                <h2>4. Customized Plan</h2>
+                <p>After understanding your needs, we will create a tailored service plan that best suits your agricultural requirements, ensuring maximum efficiency and results.</p>
+            </div>
+            <div class="step">
+                <h2>5. Schedule the Service</h2>
+                <p>Once you're happy with the plan, we'll set a convenient time to carry out the service. Our team will confirm all details and ensure everything is ready for the service to begin.</p>
+            </div>
+            <div class="step">
+                <h2>6. Confirmation and Service Execution</h2>
+                <p>You will receive a confirmation email or phone call, and on the scheduled date, our team will arrive to deliver the service with precision and care.</p>
             </div>
         </div>
     </div>
+    <div class="additional-section">
+        <button class="non-clickable-button">Your Trusted Company!</button>
+        <div class="info-content">
+            <div class="info-text">
+                <p>Did you know Skyfield's drones can cover 30 acres an hour, making them 30 times faster than manual spraying?</p>
+            </div>
+            <div class="info-image">
+                <!-- Replace the drone image with the video -->
+                <video width="100%" autoplay loop muted>
+                    <source src="kwansa.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
     <!--about Skyfield-->
     <section class="about-container" id="about">
         <h2>Skyfield Aerotech offers:</h2>
@@ -1794,13 +1820,16 @@
     <!--impact-->
     <section class="impact-container" id="impact">
         <h2><em>Cultivating Impact:</em> Empowering Communities Through Innovation</h2>
-
+    
         <div class="impact-content">
-            <!-- Left Column (Image) -->
+            <!-- Left Column (Video) -->
             <div>
-                <img src="drone_icon.jpg" alt="Drone Technology">
+                <video width="100%" height="auto" autoplay loop muted>
+                    <source src="tasuu.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-
+    
             <!-- Right Column (Text) -->
             <div class="impact-card">
                 <p>At Skyfield Aerotech, we are passionate about making a real difference in farming communities. We use
@@ -1810,7 +1839,7 @@
                     work closely with communities, offering training and support to help them make the most of these
                     innovations. By empowering farmers with knowledge and tools, we are helping them thrive in a
                     changing world while staying connected to their roots.</p>
-
+    
                 <p>Together we are creating a future where agriculture is not just about growing crops, but about
                     growing stronger, more resilient communities. Let's plant the seeds for a better tomorrow.</p>
             </div>
