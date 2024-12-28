@@ -13,34 +13,38 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if the form is submitted via POST
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
-    $firstName = mysqli_real_escape_string($conn, $_POST['first_name']);
-    $lastName = mysqli_real_escape_string($conn, $_POST['last_name']);
-    $phoneNumber = mysqli_real_escape_string($conn, $_POST['phone_number']);
-    $farmLocation = mysqli_real_escape_string($conn, $_POST['farm_location']);
-    $farmSize = mysqli_real_escape_string($conn, $_POST['farm_size']);
-    $services = isset($_POST['services']) ? implode(", ", $_POST['services']) : '';
+// Check if the form is submitted via GET
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    // Retrieve and sanitize form data
+    $firstName = isset($_GET['first_name']) ? mysqli_real_escape_string($conn, $_GET['first_name']) : '';
+    $lastName = isset($_GET['last_name']) ? mysqli_real_escape_string($conn, $_GET['last_name']) : '';
+    $phoneNumber = isset($_GET['phone_number']) ? mysqli_real_escape_string($conn, $_GET['phone_number']) : '';
+    $farmLocation = isset($_GET['farm_location']) ? mysqli_real_escape_string($conn, $_GET['farm_location']) : '';
+    $farmSize = isset($_GET['farm_size']) ? mysqli_real_escape_string($conn, $_GET['farm_size']) : '';
+    $messageSkyfield = isset($_GET['message_skyfield']) ? mysqli_real_escape_string($conn, $_GET['message_skyfield']) : '';
+    
+    // Validate required fields
+    if (empty($firstName) || empty($lastName) || empty($phoneNumber)) {
+        die("Error: Missing required fields.");
+    }
 
     // SQL query to insert data into the database
-    $sql = "INSERT INTO aerotech (first_name, last_name, phone_number, farm_location, farm_size, services)
-            VALUES ('$firstName', '$lastName', '$phoneNumber', '$farmLocation', '$farmSize', '$services')";
+    $sql = "INSERT INTO aerotech (first_name, last_name, phone_number, farm_location, farm_size, message_skyfield)
+            VALUES ('$firstName', '$lastName', '$phoneNumber', '$farmLocation', '$farmSize', '$messageSkyfield')";
 
     if ($conn->query($sql) === TRUE) {
         // Prepare email content manually without special encoding
         $subject = "New Form Submission from $firstName $lastName";
 
         // Manually create the body of the email with clean text
-        $body = "First Name: $firstName\nLast Name: $lastName\nPhone Number: $phoneNumber\nFarm Location: $farmLocation\nFarm Size: $farmSize\nServices: $services";
+        $body = "First Name: $firstName\nLast Name: $lastName\nPhone Number: $phoneNumber\nFarm Location: $farmLocation\nFarm Size: $farmSize\nMessage: $messageSkyfield";
 
         // Construct the mailto URL with properly encoded values
         $toEmail = "skyfield.kenya@gmail.com";  // Your company email address
         $mailto = "mailto:$toEmail?subject=" . urlencode($subject) . "&body=" . urlencode($body);
 
-        // Prevent immediate redirection to index.html
+        // Open the email client
         echo "<script type='text/javascript'>
-                // Open the email client
                 window.location.href = '$mailto';
                 // After a delay, redirect to index.html for fresh inputs
                 setTimeout(function() {
