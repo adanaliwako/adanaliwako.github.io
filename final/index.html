@@ -2107,11 +2107,11 @@
                         body: formData
                     });
                 }
-                throw new Error('Form submission failed.');
+                throw new Error('Request submission failed.');
             })
             .then(response => {
                 if (response.ok) {
-                    alert('Form submitted successfully!');
+                    alert('Request submitted successfully!');
                     this.reset(); // Reset the form
                 } else {
                     throw new Error('Database submission failed.');
