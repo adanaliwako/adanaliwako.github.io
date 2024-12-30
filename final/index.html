@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="team.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 </head>
 <style>
     /* Team Member Image Styles */
@@ -1785,7 +1788,8 @@
                     <p>Reach out to our team by email at <a style="color: red;"
                             href="mailto:skyfield.kenya@gmail.com">skyfield.kenya@gmail.com</a> or call us directly at
                         <a style="color: red;" href="tel:0115037380">0115037380</a> to discuss your specific needs and
-                        requirements.</p>
+                        requirements.
+                    </p>
                 </div>
                 <div class="step">
                     <h2>3. Consultation</h2>
@@ -1815,7 +1819,8 @@
             <button class="non-clickable-button">Your Trusted Company!</button>
             <div class="info-content">
                 <div class="info-text">
-                    <p style="color: #013220;">Did you know Skyfield's drones can cover 30 acres an hour, making them 30 times faster than
+                    <p style="color: #013220;">Did you know Skyfield's drones can cover 30 acres an hour, making them 30
+                        times faster than
                         manual spraying?</p>
                 </div>
                 <div class="info-image">
@@ -2044,34 +2049,36 @@
         </div>
     </div><br><br>
     <!--form-->
-    
+
     <div class="fomu" id="contact">
         <div class="form-container">
             <h1><b>Contact Skyfield Aerotech</b></h1>
-            <form id="contactForm" action="https://formspree.io/f/mrbbqraz" method="POST">
+            <form id="contactForm">
                 <!-- First Name -->
-                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="first_name" id="first_name" placeholder="First Name" required>
 
                 <!-- Last Name -->
-                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name" required>
 
                 <!-- Phone Number -->
-                <input type="text" name="phone_number" placeholder="Phone Number" required>
+                <input type="text" name="phone_number" id="phone_number" placeholder="Phone Number" required>
 
                 <!-- Farm Location -->
-                <input type="text" name="farm_location" placeholder="Farm Location" required>
+                <input type="text" name="farm_location" id="farm_location" placeholder="Farm Location" required>
 
                 <!-- Farm Size -->
-                <input type="text" name="farm_size" placeholder="Farm Size (in acres)" required>
+                <input type="text" name="farm_size" id="farm_size" placeholder="Farm Size (in acres)" required>
 
                 <!-- Services Checkbox -->
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="services[]" value="Crops Spraying"> Crops Spraying</label>
-                    <label><input type="checkbox" name="services[]" value="Fertilizer Applications"> Fertilizer Applications</label>
+                    <label><input type="checkbox" name="services[]" value="Fertilizer Applications"> Fertilizer
+                        Applications</label>
                     <label><input type="checkbox" name="services[]" value="Crop Monitoring"> Crop Monitoring</label>
                 </div> <br>
                 <label for="message_skyfield"><b>Your Message:</b></label>
-                <textarea name="message_skyfield" rows="5" placeholder="Type here..." required></textarea>
+                <textarea name="message_skyfield" id="message_skyfield" rows="5" placeholder="Type here..."
+                    required></textarea>
 
                 <!-- Submit Button -->
                 <button type="submit">Submit</button>
@@ -2085,7 +2092,58 @@
     </div>
 
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
+        // Your Firebase configuration
+        const firebaseConfig = {
+  apiKey: "AIzaSyCpWic9klO8t3ohGMbuKtuUNdpM2Qherok",
+  authDomain: "skyfield-aerotech.firebaseapp.com",
+  databaseURL: "https://skyfield-aerotech-default-rtdb.firebaseio.com",
+  projectId: "skyfield-aerotech",
+  storageBucket: "skyfield-aerotech.firebasestorage.app",
+  messagingSenderId: "946467257744",
+  appId: "1:946467257744:web:2d6a7ab559ab9c75dac715",
+  measurementId: "G-6EP54503HT"
+};
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Gather form data
+            const firstName = document.getElementById('first_name').value;
+            const lastName = document.getElementById('last_name').value;
+            const phoneNumber = document.getElementById('phone_number').value;
+            const farmLocation = document.getElementById('farm_location').value;
+            const farmSize = document.getElementById('farm_size').value;
+            const messageSkyfield = document.getElementById('message_skyfield').value;
+            const services = Array.from(document.querySelectorAll('input[name="services[]"]:checked')).map(el => el.value);
+
+            // Add data to Firestore
+            db.collection("aerotech").add({
+                first_name: firstName,
+                last_name: lastName,
+                phone_number: phoneNumber,
+                farm_location: farmLocation,
+                farm_size: farmSize,
+                message_skyfield: messageSkyfield,
+                services: services.join(", ") // Join services into a single string
+            })
+                .then(() => {
+                    alert("Request submitted successfully!");
+                    document.getElementById('contactForm').reset(); // Reset the form
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                    alert("Error submitting request. Please try again.");
+                });
+        });
+    </script>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
 
             // Gather form data
@@ -2099,27 +2157,27 @@
                     'Accept': 'application/json'
                 }
             })
-            .then(response => {
-                if (response.ok) {
-                    // If Formspree submission is successful, send data to your PHP script
-                    return fetch('submit.php', {
-                        method: 'POST',
-                        body: formData
-                    });
-                }
-                throw new Error('Request submission failed.');
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Request submitted successfully!');
-                    this.reset(); // Reset the form
-                } else {
-                    throw new Error('Database submission failed.');
-                }
-            })
-            .catch(error => {
-                alert(error.message);
-            });
+                .then(response => {
+                    if (response.ok) {
+                        // If Formspree submission is successful, send data to your PHP script
+                        return fetch('submit.php', {
+                            method: 'POST',
+                            body: formData
+                        });
+                    }
+                    throw new Error('Request submission failed.');
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Request submitted successfully!');
+                        this.reset(); // Reset the form
+                    } else {
+                        throw new Error('Database submission failed.');
+                    }
+                })
+                .catch(error => {
+                    alert(error.message);
+                });
         });
     </script><br><br><br><br><br><br><br><br>
     <!--footer-->
