@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    
 </head>
 <style>
     /* Team Member Image Styles */
@@ -1482,11 +1482,195 @@
             /* Change color on hover */
         }
     }
+    /* Basic Reset */
+.elephant {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background-image: url('open.jpeg');
+    overflow: hidden;
+}
+/* 3D Text Card on the Right */
+.lion {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+}
+.lion:hover {
+    transform: translateY(-50%) rotateY(10deg);
+}
+
+.tiger {
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 2s forwards;
+}
+.welcome-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.subheading {
+    font-size: 1.8em;
+    margin-top: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 3s forwards;
+}
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Carousel Container - Centered vertically and aligned to the right */
+.giraffe {
+   
+    top: 65%;
+    left: 90%;
+    transform: translateY(-50%);
+    height: 80vh;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+/* Carousel */
+.zebra {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    left: 180%;
+    top: 65%;
+}
+
+/* Individual Cards */
+.cheetah {
+    position: absolute;
+    width: 50%; 
+    height: 60%;
+    transform-origin: center;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    left: 2%;
+}
+.cheetah img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Card Information */
+.leopard {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.cheetah:hover .leopard {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .zebra {
+        width: 300px;
+        height: 300px;
+    }
+
+    .cheetah {
+        width: 200px;
+        height: 250px;
+    }
+
+    .giraffe {
+        width: 300px;
+    }
+
+    .lion {
+        width: 250px;
+        height: 200px;
+    }
+
+    .welcome-heading {
+        font-size: 2em;
+    }
+
+    .subheading {
+        font-size: 1.2em;
+    }
+}
+
+/* Investors Link Styles */
+.dolphin {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.btn-investors {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #0078d4;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+margin-bottom: 20%;
+}
+
+.btn-investors:hover {
+    background-color: #005bb5;
+    transform: translateY(-5px) scale(1.05);
+}
 </style>
 <div class="kichwa">
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
         <a href="#">
-            <img src="images/logo.png" alt="Company Logo" style="height: 50px;"> <b>SKYFIELD AEROTECH</b>
+            <img src="logo.png" alt="Company Logo" style="height: 50px;"> <b>SKYFIELD AEROTECH</b>
         </a>
         <div class="hamburger" id="hamburger">
             <span></span>
@@ -1525,6 +1709,91 @@
 </div>
 
 <body>
+    <div class="elephant">
+
+        <!-- 3D Animated Text Card on the Right -->
+        <div class="lion">
+            <div class="tiger">
+                <h1 class="welcome-heading">Welcome to Skyfield Aerotech</h1>
+                <h2 class="subheading">Skyfield Got Your Back!</h2>
+            </div>
+        </div>
+    
+        <!-- Carousel with Cards -->
+        <div class="giraffe">
+            <div class="zebra">
+                <div class="cheetah" id="card-1">
+                    <img src="spray.png" alt="Crop Spraying">
+                    <div class="leopard">
+                        <h3>Crop Spraying</h3>
+                        <p>Efficient and precise crop spraying for maximum yield.</p>
+                    </div>
+                </div>
+                <div class="cheetah" id="card-2">
+                    <img src="monitoring.jpg" alt="Crop Monitoring">
+                    <div class="leopard">
+                        <h3>Crop Monitoring</h3>
+                        <p>Real-time monitoring to optimize crop health and productivity.</p>
+                    </div>
+                </div>
+                <div class="cheetah" id="card-3">
+                    <img src="fertilizer.jpg" alt="Fertilizer Application">
+                    <div class="leopard">
+                        <h3>Fertilizer Application</h3>
+                        <p>Targeted fertilizer application for optimal growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Investors Link Section -->
+        <div class="dolphin">
+            <a href="investors.html" class="btn-investors">Join Our Investors</a>
+        </div>
+        <script>
+            let currentCard = 0;
+const cards = document.querySelectorAll('.cheetah');
+const totalCards = cards.length;
+const carousel = document.querySelector('.zebra');
+
+function setCardPositions() {
+    const angle = 360 / 4;
+    const cardRadius = 280;
+
+    cards.forEach((card, index) => {
+        const rotateY = angle * index;
+        card.style.transform = `rotateY(${rotateY}deg) translateZ(${cardRadius}px)`;
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setCardPositions();
+});
+
+function rotateCarousel() {
+    currentCard = (currentCard + 1) % totalCards;
+    const angle = -360 / totalCards * currentCard;
+    carousel.style.transform = `rotateY(${angle}deg)`;
+}
+
+cards.forEach(card => {
+    card.addEventListener('click', rotateCarousel);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnInvestors = document.querySelector('.btn-investors');
+
+    if (btnInvestors) {
+        btnInvestors.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = btnInvestors.href;
+        });
+    }
+});
+
+        </script>
+    </div> <br>
+    
     <!--welcome-->
     <div class="canva">
 
@@ -1545,10 +1814,10 @@
 
             // Load images
             const droneImg = new Image();
-            droneImg.src = 'images/drone.jpg'; // Replace with the path to your drone image
+            droneImg.src = 'drone.jpg'; // Replace with the path to your drone image
 
             const farmImg = new Image();
-            farmImg.src = 'images/farm.jpg'; // Replace with the path to your farm image
+            farmImg.src = 'farm.jpg'; // Replace with the path to your farm image
 
             // Particle Array for mist
             const particles = [];
@@ -1826,7 +2095,7 @@
                 <div class="info-image">
                     <!-- Replace the drone image with the video -->
                     <video width="100%" autoplay loop muted>
-                        <source src="images/kwansa.mp4" type="video/mp4">
+                        <source src="kwansa.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -1900,7 +2169,7 @@
             <!-- Left Column (Video) -->
             <div>
                 <video width="100%" height="auto" autoplay loop muted>
-                    <source src="images/tasuu.mp4" type="video/mp4">
+                    <source src="tasuu.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -1984,7 +2253,7 @@
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="images/kidero.jpg" alt="Dan" style="width:100%">
+                    <img src="kidero.jpg" alt="Dan" style="width:100%">
                     <div class="w3-container">
                         <h3>Evans Mutegi</h3>
                         <p class="w3-opacity">Co-Founder | COO | Nairobi, Kenya |</p>
@@ -2026,7 +2295,7 @@
             </div>
             <div class="w3-col l3 m6 w3-margin-bottom">
                 <div class="w3-card">
-                    <img src="images/adesh.jpg" alt="" style="width:100%">
+                    <img src="adesh.jpg" alt="" style="width:100%">
                     <div class="w3-container">
                         <h3>Adan Ali Wako</h3>
                         <p class="w3-opacity">Co-Founder | CITO | Nairobi, Kenya |</p>
@@ -2053,7 +2322,7 @@
     <div class="fomu" id="contact">
         <div class="form-container">
             <h1><b>Contact Skyfield Aerotech</b></h1>
-            <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form id="contactForm">
                 <input type="text" name="first_name" id="first_name" placeholder="First Name" required>
                 <input type="text" name="last_name" id="last_name" placeholder="Last Name" required>
                 <input type="text" name="phone_number" id="phone_number" placeholder="Phone Number" required>
@@ -2064,47 +2333,15 @@
                     <label><input type="checkbox" name="services[]" value="Fertilizer Applications"> Fertilizer Applications</label>
                     <label><input type="checkbox" name="services[]" value="Crop Monitoring"> Crop Monitoring</label>
                 </div>
-                <textarea name="message_skyfield" id="message_skyfield" rows="5" placeholder="Type here..." required></textarea>
+                <textarea style="resize: none;" name="message_skyfield" id="message_skyfield" rows="5" placeholder="Type here..." required></textarea>
                 <button type="submit">Submit</button>
             </form>
-
-            <!-- Footer -->
-            <div class="form-footer">
-                <p>Have questions? <a href="mailto:skyfield.kenya@gmail.com">Contact us</a></p>
-            </div>
         </div>
-        <script>
-            document.getElementById('contactForm').addEventListener('submit', function (event) {
-                event.preventDefault(); // Prevent the default form submission
-    
-                const formData = new FormData(this);
-    
-                // Send data to Formspree
-                fetch(this.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        alert('Request submitted successfully!');
-                        this.reset(); // Reset the form
-                    } else {
-                        throw new Error('Request submission failed.');
-                    }
-                })
-                .catch(error => {
-                    alert(error.message);
-                });
-            });
-        </script>
     </div>
 
     <script>
-        // Your Firebase configuration
-        const firebaseConfig = {
+       // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+       const firebaseConfig = {
   apiKey: "AIzaSyCpWic9klO8t3ohGMbuKtuUNdpM2Qherok",
   authDomain: "skyfield-aerotech.firebaseapp.com",
   databaseURL: "https://skyfield-aerotech-default-rtdb.firebaseio.com",
@@ -2114,78 +2351,45 @@
   appId: "1:946467257744:web:2d6a7ab559ab9c75dac715",
   measurementId: "G-6EP54503HT"
 };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
 
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    // Gather form data
-    const firstName = document.getElementById('first_name').value;
-    const lastName = document.getElementById('last_name').value;
-    const phoneNumber = document.getElementById('phone_number').value;
-    const farmLocation = document.getElementById('farm_location').value;
-    const farmSize = document.getElementById('farm_size').value;
-    const messageSkyfield = document.getElementById('message_skyfield').value;
-    const services = Array.from(document.querySelectorAll('input[name="services[]"]:checked')).map(el => el.value);
-
-    // Add data to Firestore
-    db.collection("aerotech").add({
-        first_name: firstName,
-        last_name: lastName,
-        phone_number: phoneNumber,
-        farm_location: farmLocation,
-        farm_size: farmSize,
-        message_skyfield: messageSkyfield,
-        services: services.join(", ") // Join services into a single string
-    })
-    .then(() => {
-        alert("Request submitted successfully!");
-        document.getElementById('contactForm').reset(); // Reset the form
-    })
-    .catch((error) => {
-        console.error("Error adding document: ", error);
-        alert("Error submitting request. Please try again.");
-    });
-});
-    </script>
-
-    <script>
+        // Form submission logic
         document.getElementById('contactForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent the default form submission
 
             // Gather form data
-            const formData = new FormData(this);
+            const firstName = document.getElementById('first_name').value;
+            const lastName = document.getElementById('last_name').value;
+            const phoneNumber = document.getElementById('phone_number').value;
+            const farmLocation = document.getElementById('farm_location').value;
+            const farmSize = document.getElementById('farm_size').value;
+            const messageSkyfield = document.getElementById('message_skyfield').value;
+            const services = Array.from(document.querySelectorAll('input[name="services[]"]:checked')).map(el => el.value);
 
-            // Send data to Formspree
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+            // Add data to Firestore
+            db.collection("aerotech").add({
+                first_name: firstName,
+                last_name: lastName,
+                phone_number: phoneNumber,
+                farm_location: farmLocation,
+                farm_size: farmSize,
+                message_skyfield: messageSkyfield,
+                services: services.join(", ") // Join services into a single string
             })
-                .then(response => {
-                    if (response.ok) {
-                        // If Formspree submission is successful, send data to your PHP script
-                        return fetch('submit.php', {
-                            method: 'POST',
-                            body: formData
-                        });
-                    }
-                    throw new Error('Request submission failed.');
-                })
-                .then(response => {
-                    if (response.ok) {
-                        alert('Request submitted successfully!');
-                        this.reset(); // Reset the form
-                    } else {
-                        throw new Error('Database submission failed.');
-                    }
-                })
-                .catch(error => {
-                    alert(error.message);
-                });
+            .then(() => {
+                alert("Request submitted successfully to the database!");
+                document.getElementById('contactForm').reset(); // Reset the form
+            })
+            .catch((error) => {
+                console.error("Error adding document: ", error);
+                alert("Error submitting request. Please try again.");
+            });
         });
-    </script><br><br><br><br><br><br><br><br>
+    </script>
+  
+  <br><br><br><br><br><br><br><br>
     <!--footer-->
     <footer class="foot">
         <h2>Skyfield Aerotech</h2>
