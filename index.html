@@ -1666,6 +1666,140 @@ margin-bottom: 20%;
     background-color: #005bb5;
     transform: translateY(-5px) scale(1.05);
 }
+/* General Styles */
+.kenya {
+    font-family: Arial, sans-serif;
+    background-image: url('open.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 3D Text Card */
+.brazil {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-out;
+}
+
+.brazil:hover {
+    transform: rotateY(10deg);
+}
+
+.india {
+    color: white;
+}
+
+.welcome-heading {
+    font-size: 2em;
+}
+
+.subheading {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Carousel Styles */
+.canada {
+    width: 90%;
+    max-width: 600px;
+    perspective: 1000px;
+    margin-top: 20px;
+}
+
+.australia {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 1s ease;
+    transform-style: preserve-3d;
+    width: 100%;
+}
+
+.japan {
+    flex: 0 0 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    backface-visibility: hidden;
+    cursor: pointer;
+    transform-origin: center;
+    transform: translateZ(0) scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.japan img {
+    width: 100%;
+    height: auto;
+}
+
+.germany {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.japan:hover .germany {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Styles */
+.btn-investors {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #0078d4;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-investors:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .canada {
+        max-width: 100%;
+    }
+    
+    .brazil {
+        max-width: 90%;
+    }
+
+    .welcome-heading {
+        font-size: 1.5em;
+    }
+
+    .subheading {
+        font-size: 1em;
+    }
+}
+
 </style>
 <div class="kichwa">
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
@@ -1708,247 +1842,80 @@ margin-bottom: 20%;
     </script>
 </div>
 
-<body>
-    <div class="elephant">
+<section id="yote" style="margin: 0; font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; overflow-x: hidden;">
 
-        <!-- 3D Animated Text Card on the Right -->
-        <div class="lion">
-            <div class="tiger">
-                <h1 class="welcome-heading">Welcome to Skyfield Aerotech</h1>
-                <h2 class="subheading">Skyfield Got Your Back!</h2>
-            </div>
-        </div>
     
-        <!-- Carousel with Cards -->
-        <div class="giraffe">
-            <div class="zebra">
-                <div class="cheetah" id="card-1">
-                    <img src="spray.png" alt="Crop Spraying">
-                    <div class="leopard">
-                        <h3>Crop Spraying</h3>
-                        <p>Efficient and precise crop spraying for maximum yield.</p>
-                    </div>
+
+    <!-- Welcome Section -->
+    <header style="background-color: #f4f4f9; padding: 50px 20px; text-align: center;">
+        <div style="background: linear-gradient(135deg, #0078d4, #005bb5); padding: 40px; border-radius: 12px; color: white; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); max-width: 600px; margin: 0 auto;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Welcome to Skyfield Aerotech</h1>
+            <h2 style="font-size: 1.5rem; font-weight: 300;">Skyfield Got Your Back!</h2>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" style="padding: 50px 20px; text-align: center;">
+        <h2 style="font-size: 2rem; margin-bottom: 30px;">Our Services</h2>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+            <!-- Service Card 1 -->
+            <div style="position: relative; width: 300px; height: 400px; background: #fff; border-radius: 12px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); overflow: hidden; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <div class="card-image" style="height: 70%; width: 100%;">
+                    <img src="spray.png" alt="Crop Spraying" style="width: 100%; height: 100%; object-fit: cover;">
                 </div>
-                <div class="cheetah" id="card-2">
-                    <img src="monitoring.jpg" alt="Crop Monitoring">
-                    <div class="leopard">
-                        <h3>Crop Monitoring</h3>
-                        <p>Real-time monitoring to optimize crop health and productivity.</p>
-                    </div>
-                </div>
-                <div class="cheetah" id="card-3">
-                    <img src="fertilizer.jpg" alt="Fertilizer Application">
-                    <div class="leopard">
-                        <h3>Fertilizer Application</h3>
-                        <p>Targeted fertilizer application for optimal growth.</p>
-                    </div>
+                <div class="card-text" style="position: absolute; bottom: 10px; left: 0; right: 0; padding: 20px; background-color: rgba(0, 0, 0, 0.6); color: white; font-size: 1.2em; text-align: center; border-radius: 5px; opacity: 0; transform: translateY(20px); transition: opacity 0.4s ease, transform 0.4s ease;">
+                    <h3>Crop Spraying</h3>
+                    <p>Our drone-based spraying services provide precise, fast, and cost-effective application of pesticides, fertilizers, and herbicides. Using GPS-guided technology, we ensure accurate delivery of chemicals, reducing waste and environmental impact.</p>
                 </div>
             </div>
+
+            <!-- Service Card 2 -->
+            <div style="position: relative; width: 300px; height: 400px; background: #fff; border-radius: 12px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); overflow: hidden; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <div class="card-image" style="height: 70%; width: 100%;">
+                    <img src="monitoring.jpg" alt="Crop Monitoring" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-text" style="position: absolute; bottom: 10px; left: 0; right: 0; padding: 20px; background-color: rgba(0, 0, 0, 0.6); color: white; font-size: 1.2em; text-align: center; border-radius: 5px; opacity: 0; transform: translateY(20px); transition: opacity 0.4s ease, transform 0.4s ease;">
+                    <h3>Crop Monitoring</h3>
+                    <p>Real-time crop health monitoring using drones equipped with multispectral and thermal sensors. Early detection of issues helps you take proactive measures to improve crop performance.</p>
+                </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div style="position: relative; width: 300px; height: 400px; background: #fff; border-radius: 12px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); overflow: hidden; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                <div class="card-image" style="height: 70%; width: 100%;">
+                    <img src="fertilizer.jpg" alt="Fertilizer Application" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="card-text" style="position: absolute; bottom: 10px; left: 0; right: 0; padding: 20px; background-color: rgba(0, 0, 0, 0.6); color: white; font-size: 1.2em; text-align: center; border-radius: 5px; opacity: 0; transform: translateY(20px); transition: opacity 0.4s ease, transform 0.4s ease;">
+                    <h3>Fertilizer Application</h3>
+                    <p>Precise fertilizer application tailored to crop needs, promoting optimal growth and maximizing yield potential.</p>
+                </div>
+            </div>
+
         </div>
-    
-        <!-- Investors Link Section -->
-        <div class="dolphin">
-            <a href="investors.html" class="btn-investors">Join Our Investors</a>
-        </div>
-        <script>
-            let currentCard = 0;
-const cards = document.querySelectorAll('.cheetah');
-const totalCards = cards.length;
-const carousel = document.querySelector('.zebra');
+    </section>
 
-function setCardPositions() {
-    const angle = 360 / 4;
-    const cardRadius = 280;
+    <script>
+        // Adding hover effect using inline JS to show and hide the text on hover
+        document.querySelectorAll('.card-image').forEach(cardImage => {
+            const cardText = cardImage.nextElementSibling;
 
-    cards.forEach((card, index) => {
-        const rotateY = angle * index;
-        card.style.transform = `rotateY(${rotateY}deg) translateZ(${cardRadius}px)`;
-    });
-}
+            cardImage.addEventListener('mouseover', function() {
+                cardText.style.opacity = 1;
+                cardText.style.transform = 'translateY(0)';
+            });
 
-document.addEventListener('DOMContentLoaded', () => {
-    setCardPositions();
-});
-
-function rotateCarousel() {
-    currentCard = (currentCard + 1) % totalCards;
-    const angle = -360 / totalCards * currentCard;
-    carousel.style.transform = `rotateY(${angle}deg)`;
-}
-
-cards.forEach(card => {
-    card.addEventListener('click', rotateCarousel);
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const btnInvestors = document.querySelector('.btn-investors');
-
-    if (btnInvestors) {
-        btnInvestors.addEventListener('click', (event) => {
-            event.preventDefault();
-            window.location.href = btnInvestors.href;
+            cardImage.addEventListener('mouseout', function() {
+                cardText.style.opacity = 0;
+                cardText.style.transform = 'translateY(20px)';
+            });
         });
-    }
-});
+    </script>
 
-        </script>
-    </div> <br>
+</section>
     
     <!--welcome-->
-    <div class="canva">
-
-        <div id="textContainer">
-            <div id="title">WELCOME TO SKYFIELD AEROTECH!!</div>
-            <div id="subtitle">Your Caring Partner</div>
-        </div>
-
-        <canvas id="farmCanvas"></canvas>
-
-        <script>
-            const canvas = document.getElementById('farmCanvas');
-            const ctx = canvas.getContext('2d');
-
-            // Set canvas dimensions
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-
-            // Load images
-            const droneImg = new Image();
-            droneImg.src = 'drone.jpg'; // Replace with the path to your drone image
-
-            const farmImg = new Image();
-            farmImg.src = 'farm.jpg'; // Replace with the path to your farm image
-
-            // Particle Array for mist
-            const particles = [];
-
-            // Particle Constructor
-            class Particle {
-                constructor(x, y) {
-                    this.x = x;
-                    this.y = y;
-                    this.size = Math.random() * 3 + 1;
-                    this.speedX = Math.random() * 1 - 0.5;
-                    this.speedY = Math.random() * 3 + 2;
-                    this.alpha = 1;
-                }
-
-                update() {
-                    this.x += this.speedX;
-                    this.y += this.speedY;
-                    this.alpha -= 0.02;
-                    if (this.alpha <= 0) {
-                        this.alpha = 0;
-                    }
-                }
-
-                draw() {
-                    ctx.globalAlpha = this.alpha;
-                    ctx.fillStyle = 'rgba(200, 200, 255, 0.5)';
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                    ctx.fill();
-                    ctx.globalAlpha = 1;
-                }
-            }
-
-            // Generate Mist Particles
-            function createMist(x, y) {
-                for (let i = 0; i < 5; i++) {
-                    particles.push(new Particle(x, y));
-                }
-            }
-
-            // Drone position and movement
-            let droneX = -225;
-            const droneY = canvas.height * 0.35;
-            let droneDirection = 1;
-            const droneSpeed = 1; // Slow movement for cinematic effect
-            const droneWidth = 225;
-            const droneHeight = 112.5;
-
-            // Animation Loop
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-                // Add a slight motion to the background for dynamic effect
-                ctx.drawImage(farmImg, 0, 0, canvas.width, canvas.height);
-
-                // Update drone position
-                droneX += droneDirection * droneSpeed;
-                if (droneX > canvas.width + 225 || droneX < -225) {
-                    droneDirection *= -1;
-                    droneX = droneDirection === 1 ? -225 : canvas.width + 225;
-                }
-
-                // Draw drone with dynamic effect
-                ctx.drawImage(droneImg, droneX, droneY, droneWidth, droneHeight);
-
-                // Create mist from drone
-                createMist(droneX + droneWidth / 2, droneY + droneHeight);
-
-                // Draw and update particles
-                particles.forEach((particle, index) => {
-                    particle.update();
-                    particle.draw();
-                    if (particle.alpha === 0 || particle.y > canvas.height * 0.8) {
-                        particles.splice(index, 1);
-                    }
-                });
-
-                requestAnimationFrame(animate);
-            }
-
-            // Start animation when images are loaded
-            droneImg.onload = () => {
-                farmImg.onload = () => {
-                    animate();
-                };
-            };
-
-            // Adjust canvas size on window resize
-            window.addEventListener('resize', () => {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            });
-        </script>
-    </div>
-    <!--services-->
-    <div class="container" id="services">
-        <div class="card left">
-            <h2<b>Our Services</b></h2>
-                <ul>
-                    <li><strong>Spraying:</strong> Our drone-based spraying services provide precise, fast, and
-                        cost-effective application of pesticides, fertilizers, and herbicides. Using GPS-guided
-                        technology,
-                        we ensure accurate delivery of chemicals, reducing waste and environmental impact.</li>
-                    <li><strong>Crop Monitoring:</strong> Real-time crop health monitoring using drones equipped with
-                        multispectral and thermal sensors. Early detection of issues helps you take proactive measures
-                        to
-                        improve crop performance.</li>
-                    <li><strong>Data Analysis:</strong> We analyze aerial imagery to provide actionable insights into
-                        soil
-                        health, moisture levels, and plant vitality, empowering farmers to improve productivity.</li>
-                    <li><strong>Fertilizer Application:</strong> Precise fertilizer application tailored to crop needs,
-                        promoting optimal growth and maximizing yield potential.</li>
-                    <li><strong>Farm Advisory Services:</strong> Expert crop advice with personalized guidance on every
-                        stage of crop development, helping farmers optimize yield and reduce risks.</li>
-                </ul>
-        </div>
-        <div class="card right">
-            <h2 style="color: #013220;"><b>Why Skyfield Aerotech?</b></h2>
-            <p>
-                Our services are designed to help you grow better, with solutions like precision fertilizer application
-                and personalized crop management advice.
-                We do not just provide tools; we work closely with you to understand your unique needs and offer support
-                every step of the way.
-                Our team of experts combines years of experience with the latest technology to deliver real-time
-                insights that help you succeed.
-                We believe in a future where farming is more efficient, profitable, and environmentally friendly. With
-                Skyfield Aerotech, you are not just farming; you are farming smarter.
-            </p>
-        </div>
-    </div>
+    
     <!--core values-->
     <div class="core-values-container" id="core-values">
         <h1>Here is what you are looking for:</h1>
