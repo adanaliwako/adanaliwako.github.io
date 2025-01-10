@@ -1797,7 +1797,89 @@ margin-bottom: 0;
         font-size: 1em;
     }
 }
+/* Team Container */
+.mount_everest {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 0 10%;
+            margin-bottom: 50px;
+            justify-items: center;
+            align-items: center;
+        }
 
+        /* Card Styling */
+        .kilimanjaro {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .kilimanjaro:hover {
+            transform: scale(1.05);
+        }
+
+        .kilimanjaro img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Text Overlay */
+        .kilimanjaro .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .kilimanjaro:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Information Block */
+        .kilimanjaro .info {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            background-color: #009688;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+
+        /* For Small Devices */
+        @media (max-width: 768px) {
+            .mount_everest {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 0 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mount_everest {
+                grid-template-columns: 1fr;
+                padding: 0 2%;
+            }
+        }
 </style>
 <div class="kichwa">
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
@@ -2158,218 +2240,148 @@ margin-bottom: 0;
         <a href="investors.html" class="btn-investors">Join Our Investors</a>
     </div>
     <!--team-->
-    <div class="w3-container" itemid="team" style="padding:128px 16px" id="team">
-        <h3 class="w3-center">THE SKYFIELD AEROTECH TEAM</h3>
-        <p class="w3-center w3-large">Our team is making an impact </p>
-        <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="levy.png"
-                        alt="" style="width:100%">
-                    <div class="w3-container">
-                        <h3>Levi Nguti</h3>
-                        <p class="w3-opacity">Founder | CEO, Skyfield Aerotech | Nairobi, Kenya |</p>
-                        <p>A seasoned Mechatronics Engineer, Data Analyst, and Business Strategist, Levy Nguti is a
-                            driving force behind Skyfield Aerotech. Born and raised in the heart of Mwea's rice-farming
-                            community, Levy's early experiences instilled in him a deep-rooted passion for innovation
-                            and a desire to harness technology to transform agriculture.With a keen eye for detail and a
-                            strategic mindset, Levy is dedicated to pushing the boundaries of drone technology. He
-                            envisions a future where drones are an integral part of modern agriculture, optimizing crop
-                            yields, reducing environmental impact, and empowering farmers worldwide.</p>
-                        <p><button id="myButton" style="cursor: pointer;" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i>
-                                Contact</button></p>
-                                <script>
-                                  document.addEventListener('DOMContentLoaded', (event) => {
-            const button = document.getElementById('myButton');
-            const originalContent = button.innerHTML; // Store the original button content
+    <div id="whole" style="margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+background-color: #f9f9f9;
+color: #333;">
 
-            button.addEventListener('mouseover', function() {
-                button.innerText = 'levy.nguti2003@gmail.com'; // Change to 'Ali' on hover
-            });
+    <h1 style=" text-align: center;
+    font-size: 36px;
+    color: #009688;
+    margin: 30px 0;">Our Team</h1>
+    <h3 style="text-align: center; font-size: 24px; color: green;">The team at Skyfield Aerotech</h3>
 
-            button.addEventListener('mouseleave', function() {
-                button.innerHTML = originalContent; // Revert back to the original content
-            });
-        });
-                                </script>
-                    </div>
-                    
+    <!-- Team Cards Section -->
+    <div class="mount_everest">
+        <!-- Team Card 1 -->
+        <div class="kilimanjaro" onclick="showInfo(0)">
+            <img src="levy.png" alt="Levi Nguti">
+            <div class="overlay">
+                <div class="info">
+                    Levi Nguti<br>
+                    Founder | CEO
                 </div>
             </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="https://res.cloudinary.com/dokqdcgwy/image/upload/v1730718095/IMG-20241104-WA0014_1_g4b5qy.jpg"
-                        alt="" style="width:100%">
-                    <div class="w3-container">
-                        <h3>Victoria Wambui</h3>
-                        <p class="w3-opacity">Co-Founder | CSMO | Nairobi, Kenya |</p>
-                        <p>Victoria Wambui is our dynamic Chief Strategist and Marketing Officer. With a passion for
-                            connecting farmers with innovative solutions, Victoria leads our team in crafting and
-                            executing effective marketing strategies. She's dedicated to ensuring that farmers across
-                            the nation understand the transformative power of Skyfield's drone technology. By providing
-                            personalized support and addressing specific needs, Victoria empowers farmers to make
-                            informed decisions and achieve optimal results. Her focus on direct outreach and clear
-                            communication ensures that our services are accessible and beneficial to all.</p>
-                        <p><button id="bast" style="cursor: pointer;" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i>
-                                Contact</button></p>
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', (event) => {
-            const button = document.getElementById('bast');
-            const originalContent = button.innerHTML; // Store the original button content
-
-            button.addEventListener('mouseover', function() {
-                button.innerText = 'victorianganga46@gmail.com'; // Change to 'Ali' on hover
-            });
-
-            button.addEventListener('mouseleave', function() {
-                button.innerHTML = originalContent; // Revert back to the original content
-            });
-        });
-                                </script>
-                    </div>
-                </div>
-            </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="https://res.cloudinary.com/dokqdcgwy/image/upload/v1730718134/IMG-20241104-WA0015_1_vgo46l.jpg"
-                        alt="" style="width:100%">
-                    <div class="w3-container">
-                        <h3>Swabir M. Bwana</h3>
-                        <p class="w3-opacity">Co-Founder | CFO | Hanover, US |</p>
-                        <p>Swabir M. Bwana handles finances and leads our recruiting efforts to build the right team at
-                            Skyfield Aerotech. His strategic approach ensures we have the expertise and talent needed to
-                            deliver high-quality services and innovative solutions to our clients. Swabir's financial
-                            stewardship guarantees optimal resource allocation and operational efficiency. He also
-                            drives the implementation of recruitment best practices, fostering an inclusive and dynamic
-                            workplace culture. With his dedication, Skyfield Aerotech remains competitive in attracting
-                            and retaining top industry talent.</p>
-                        <p><button id="best" style="cursor: pointer;" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i>
-                                Contact</button></p>
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', (event) => {
-            const button = document.getElementById('best');
-            const originalContent = button.innerHTML; // Store the original button content
-
-            button.addEventListener('mouseover', function() {
-                button.innerText = 'mohamedswabir01@gmail.com'; // Change to 'Ali' on hover
-            });
-
-            button.addEventListener('mouseleave', function() {
-                button.innerHTML = originalContent; // Revert back to the original content
-            });
-        });
-                                </script>
-                    </div>
-                </div>
-            </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="kidero.jpg" alt="Dan" style="width:100%">
-                    <div class="w3-container">
-                        <h3>Evans Mutegi</h3>
-                        <p class="w3-opacity">Co-Founder | COO | Nairobi, Kenya |</p>
-                        <p>A data scientist, web developer, computer scientist, and cyber security enthusiast with a
-                            passion for using his skills to bring change into Agriculture using drone technology. He
-                            leverages machine learning and data analytics to optimize precision agriculture practices.
-                            His innovative drone solutions aim to enhance crop management, reduce costs, and improve
-                            sustainability in farming. With expertise in coding and system design, he builds robust
-                            platforms to integrate drone data with actionable insights for farmers. His dedication to
-                            merging technology with agriculture is driving a new era of smart farming in Kenya and
-                            beyond.</p>
-                        <p><button id="bist" style="cursor: pointer;" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i>
-                                Contact</button></p>
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', (event) => {
-            const button = document.getElementById('bist');
-            const originalContent = button.innerHTML; // Store the original button content
-
-            button.addEventListener('mouseover', function() {
-                button.innerText = 'mutegievans007@gmail.com'; // Change to 'Ali' on hover
-            });
-
-            button.addEventListener('mouseleave', function() {
-                button.innerHTML = originalContent; // Revert back to the original content
-            });
-        });
-                                </script>
-                    </div>
-                </div>
-            </div>
-
         </div>
-        <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="https://res.cloudinary.com/dokqdcgwy/image/upload/v1730718174/IMG-20241104-WA0017_1_rrcjwv.jpg"
-                        alt="" style="width:100%">
-                    <div class="w3-container">
-                        <h3>Granton Ojiambo</h3>
-                        <p class="w3-opacity">Co-Founder | CTO, Skyfield Aerotech | Nairobi, Kenya |</p>
-                        <p>Certified IoT Developer, ROS 1, Student Mechatronics Engineer with specialization in drone
-                            technology. His commitment goes beyond technology. He enjoys applying his skills to make a
-                            tangible impact in Agriculture. he is also a certified IoT developer with over 15 IoT
-                            projects completed, his true passion lies in pioneering drone applications that push
-                            technological boundaries. His work is rooted in innovation and a commitment to creating
-                            versatile, high-performance drones that meet todays complex demands. His commitment goes
-                            beyond technology; He passionate about helping people by addressing unique challenges with
-                            innovative tech solutions.</p>
-                        <p><button id="bost" style="cursor: pointer;" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i>
-                                Contact</button></p>
-                                <script>
-                                    document.addEventListener('DOMContentLoaded', (event) => {
-            const button = document.getElementById('bost');
-            const originalContent = button.innerHTML; // Store the original button content
 
-            button.addEventListener('mouseover', function() {
-                button.innerText = 'absalomgranton7911@gmail.com'; // Change to 'Ali' on hover
-            });
-
-            button.addEventListener('mouseleave', function() {
-                button.innerHTML = originalContent; // Revert back to the original content
-            });
-        });
-                                </script>
-                    </div>
+        <!-- Team Card 2 -->
+        <div class="kilimanjaro" onclick="showInfo(1)">
+            <img src="https://res.cloudinary.com/dokqdcgwy/image/upload/v1730718095/IMG-20241104-WA0014_1_g4b5qy.jpg"
+                alt="Victoria Wambui">
+            <div class="overlay">
+                <div class="info">
+                    Victoria Wambui<br>
+                    Co-Founder | CSMO
                 </div>
             </div>
-            <div class="w3-col l3 m6 w3-margin-bottom">
-                <div class="w3-card">
-                    <img src="adesh.jpg" alt="" style="width:100%">
-                    <div class="w3-container">
-                        <h3>Adan Ali Wako</h3>
-                        <p class="w3-opacity">Head of Information | H.IT | Nairobi, Kenya |</p>
-                        <p>Adan Ali Wako spearheads all technology and IT operations at Skyfield Aerotech as the Chief
-                            Information and Technology Officer (CITO). With a keen eye for innovation, Adan ensures the
-                            seamless integration of cutting-edge technologies to enhance efficiency and drive the
-                            company’s strategic objectives. His expertise encompasses IT infrastructure, digital
-                            transformation, and advanced software systems, enabling Skyfield Aerotech to remain at the
-                            forefront of technological advancements.
-
-                            Adan is dedicated to building resilient and scalable systems that support the organization’s
-                            goals while prioritizing security and reliability.</p>
-                        <p><button id="bust" style="cursor: pointer;" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i>
-                                Contact</button></p>
-                                <script>
-                                     document.addEventListener('DOMContentLoaded', (event) => {
-            const button = document.getElementById('bust');
-            const originalContent = button.innerHTML; // Store the original button content
-
-            button.addEventListener('mouseover', function() {
-                button.innerText = 'adanaliwako50@gmail.com'; // Change to 'Ali' on hover
-            });
-
-            button.addEventListener('mouseleave', function() {
-                button.innerHTML = originalContent; // Revert back to the original content
-            });
-        });
-                                </script>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
-    </div><br><br>
+
+        <!-- Team Card 3 -->
+        <div class="kilimanjaro" onclick="showInfo(2)">
+            <img src="https://res.cloudinary.com/dokqdcgwy/image/upload/v1730718134/IMG-20241104-WA0015_1_vgo46l.jpg"
+                alt="Swabir M. Bwana">
+            <div class="overlay">
+                <div class="info">
+                    Swabir M. Bwana<br>
+                    Co-Founder | CFO
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Card 4 -->
+        <div class="kilimanjaro" onclick="showInfo(3)">
+            <img src="kidero.jpg" alt="Evans Mutegi">
+            <div class="overlay">
+                <div class="info">
+                    Evans Mutegi<br>
+                    Co-Founder | COO
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Card 5 -->
+        <div class="kilimanjaro" onclick="showInfo(4)">
+            <img src="https://res.cloudinary.com/dokqdcgwy/image/upload/v1730718174/IMG-20241104-WA0017_1_rrcjwv.jpg"
+                alt="Granton Ojiambo">
+            <div class="overlay">
+                <div class="info">
+                    Granton Ojiambo<br>
+                    Co-Founder | CTO
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Card 6 -->
+        <div class="kilimanjaro" onclick="showInfo(5)">
+            <img src="adesh.jpg" alt="Adan Ali Wako">
+            <div class="overlay">
+                <div class="info">
+                    Adan Ali Wako<br>
+                    Head of Information | H.IT
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Information Modal -->
+    <div id="infoModal"
+        style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.6); z-index: 9999;">
+        <div
+            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 30px; width: 70%; max-width: 500px; border-radius: 15px;">
+            <h2 id="personName"></h2>
+            <p id="personDetails"></p>
+            <button onclick="closeInfo()"
+                style="background-color: #009688; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; font-size: 16px;">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const teamData = [
+            {
+                name: "Levi Nguti",
+                role: "Founder | CEO",
+                details: "A seasoned Mechatronics Engineer, Data Analyst, and Business Strategist, Levy is a driving force behind Skyfield Aerotech. He envisions a future where drones are an integral part of modern agriculture, optimizing crop yields and empowering farmers worldwide."
+            },
+            {
+                name: "Victoria Wambui",
+                role: "Co-Founder | CSMO",
+                details: "Victoria is our dynamic Chief Strategist and Marketing Officer. She crafts and executes marketing strategies to connect farmers with innovative solutions, ensuring they understand the transformative power of Skyfield's drone technology."
+            },
+            {
+                name: "Swabir M. Bwana",
+                role: "Co-Founder | CFO",
+                details: "Swabir handles finances and recruiting efforts at Skyfield, ensuring optimal resource allocation, operational efficiency, and fostering a dynamic workplace culture. His stewardship helps Skyfield remain competitive in attracting top industry talent."
+            },
+            {
+                name: "Evans Mutegi",
+                role: "Co-Founder | COO",
+                details: "A data scientist, web developer, and cyber security enthusiast. Evans is dedicated to using drone technology and data analytics to optimize precision agriculture practices and bring new efficiencies to farming."
+            },
+            {
+                name: "Granton Ojiambo",
+                role: "Co-Founder | CTO",
+                details: "A certified IoT developer and Mechatronics Engineer, Granton applies his expertise in drone technology to create versatile, high-performance drones, helping farmers optimize their agricultural operations."
+            },
+            {
+                name: "Adan Ali Wako",
+                role: "Head of Information | H.IT",
+                details: "Adan Ali Wako spearheads all technology and IT operations at Skyfield Aerotech as the Chief Information and Technology Officer (CITO). With a keen eye for innovation, Adan ensures the seamless integration of cutting-edge technologies to enhance efficiency and drive the company’s strategic objectives. His expertise encompasses IT infrastructure, digital transformation, and advanced software systems, enabling Skyfield Aerotech to remain at the forefront of technological advancements. Adan is dedicated to building resilient and scalable systems that support the organization’s goals while prioritizing security and reliability."
+            }
+        ];
+
+        function showInfo(index) {
+            document.getElementById('personName').innerText = teamData[index].name;
+            document.getElementById('personDetails').innerText = teamData[index].details;
+            document.getElementById('infoModal').style.display = 'block';
+        }
+
+        function closeInfo() {
+            document.getElementById('infoModal').style.display = 'none';
+        }
+    </script>
+
+</div><br><br><br><br><br>
     <!--form-->
 
     <div class="fomu" id="contact">
