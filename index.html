@@ -1919,6 +1919,17 @@ margin-bottom: 0;
                 navMenu.classList.remove('active'); // Remove the active class to close the menu
             });
         });
+        // Get the hamburger menu element
+const hamburgerMenu = document.getElementById('nav-menu');
+
+// Add event listener to the document
+document.addEventListener('click', function(event) {
+  // Check if the click is outside the hamburger menu
+  if (!hamburgerMenu.contains(event.target) && !event.target.classList.contains('hamburger')) {
+    // Close the hamburger menu
+    hamburgerMenu.classList.remove('active');
+  }
+});
     </script>
 </div>
 
