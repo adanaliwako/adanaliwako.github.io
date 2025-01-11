@@ -1930,6 +1930,24 @@ document.addEventListener('click', function(event) {
     hamburgerMenu.classList.remove('active');
   }
 });
+let menuOpen = false;
+
+hamburger.addEventListener('click', () => {
+  if (!menuOpen) {
+    navMenu.classList.add('active');
+    menuOpen = true;
+  } else {
+    navMenu.classList.remove('active');
+    menuOpen = false;
+  }
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    menuOpen = false;
+  });
+});
     </script>
 </div>
 
