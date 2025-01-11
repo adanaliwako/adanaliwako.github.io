@@ -1919,35 +1919,7 @@ margin-bottom: 0;
                 navMenu.classList.remove('active'); // Remove the active class to close the menu
             });
         });
-        // Get the hamburger menu element
-const hamburgerMenu = document.getElementById('nav-menu');
-
-// Add event listener to the document
-document.addEventListener('click', function(event) {
-  // Check if the click is outside the hamburger menu
-  if (!hamburgerMenu.contains(event.target) && !event.target.classList.contains('hamburger')) {
-    // Close the hamburger menu
-    hamburgerMenu.classList.remove('active');
-  }
-});
-let menuOpen = false;
-
-hamburger.addEventListener('click', () => {
-  if (!menuOpen) {
-    navMenu.classList.add('active');
-    menuOpen = true;
-  } else {
-    navMenu.classList.remove('active');
-    menuOpen = false;
-  }
-});
-
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-    menuOpen = false;
-  });
-});
+        
     </script>
 </div>
 
