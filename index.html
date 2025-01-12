@@ -2449,22 +2449,26 @@ color: #333;">
             });
         </script>
         <style>
-            .error-border {
-                border: 2px solid red !important;
-                box-shadow: 0 0 5px red !important;
-            }
-            
-            @media screen and (max-width: 768px) {
-                .container {
-                    flex-direction: column;
-                    align-items: center;
-                }
-                .col-md-6 {
-                    width: 100%;
-                    margin-bottom: 20px;
-                }
-            }
-        </style>
+      
+    /* Make the container responsive */
+    @media screen and (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .col-md-6 {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Adjust the button to fit smaller screens */
+        #submitButton {
+            width: 100%;
+        }
+    }
+</style>
+       
     </body>
   
   <br><br><br><br><br><br><br><br>
@@ -2473,7 +2477,7 @@ color: #333;">
         <h2>Skyfield Aerotech</h2>
         <p>Your trusted partner in agriculture technology and services.</p>
         <div class="brand-line">
-            <p>SKYFIELD, YOUR CARING PARTNER</p>00
+            <p>SKYFIELD, YOUR CARING PARTNER</p>
         </div>
         <!-- Social Media Icons -->
         <div class="social-icons">
