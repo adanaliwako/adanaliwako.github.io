@@ -2294,69 +2294,85 @@ color: #333;">
 </div>
     <!--form-->
 
-    <body style="font-family: 'Roboto', sans-serif; background-color: whitesmoke; color: white; margin: 0; padding: 0;">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <section id="contact" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; padding: 40px; background-image: url('df.jpg'); background-size: cover; background-position: center; color: #fff; margin-top: 50px;">
-            <h2 style="font-size: 3em; margin-bottom: 10px; text-align: center; font-family: 'Montserrat', sans-serif; color: green;">Contact Skyfield Aerotech</h2>
-            <h3 style="font-size: 1.5em; text-align: center;color: green;">Get in touch with us for any inquiries</h3>
-            <div id="error-message" style="background-color: #e74c3c; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; text-align: center; display: none;">Fill all the fields!!!</div>
-            <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 30px; width: 100%; max-width: 1200px;">
-                <div class="col-md-6" style="background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 8px; width: 48%; display: flex; flex-direction: column; justify-content: space-between; min-height: 500px;">
-                    <h3 style="color: white; font-size: 1.8em;">Personal Information</h3>
-                    <form id="contactForm">
-                        <div class="form-group" style="margin-bottom: 15px;">
-                            <input type="text" id="first_name" placeholder="First Name *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
-                        </div>
-                        <div class="form-group" style="margin-bottom: 15px;">
-                            <input type="text" id="last_name" placeholder="Last Name *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
-                        </div>
-                        <div class="form-group" style="margin-bottom: 15px;">
-                            <input type="tel" id="phone_number" placeholder="Phone Number *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
-                        </div>
-                        <div class="form-group" style="margin-bottom: 15px;">
-                            <input type="text" id="farm_location" placeholder="Farm Location *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
-                        </div>
-                        <div class="form-group" style="margin-bottom: 15px;">
-                            <input type="number" id="farm_size" placeholder="Farm Size (acres) *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
-                        </div>
-                        <div class="form-group" style="margin-bottom: 15px;">
-                            <label style="color: #fff;"><input type="checkbox" name="services" value="Crop Monitoring"> Crop Monitoring</label><br>
-                            <label style="color: #fff;"><input type="checkbox" name="services" value="Fertilizer Application"> Fertilizer Application</label><br>
-                            <label style="color: #fff;"><input type="checkbox" name="services" value="Crops Spraying"> Crops Spraying</label><br>
-                        </div>
-                    </form>
-                </div>
+    <body style="font-family: Arial, sans-serif; background-color: whitesmoke; color: white; margin: 0; padding: 0; text-align: center;">
+
+        <section style="background-image: url('df.jpg'); background-size: cover; background-position: center; padding: 40px; color: white;">
+            <div style="background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 8px; width: 90%; max-width: 900px; margin: auto;">
+                <h2 style="color: whitesmoke; font-size: 2em;">Contact Skyfield Aerotech</h2>
+                <h3 style="color: whitesmoke; font-size: 1.2em;">Get in touch with us for any inquiries</h3>
+                <div style="display: none; background-color: red; padding: 10px; margin-bottom: 20px;" id="error-message">Please fill all required fields!</div>
     
-                <div class="col-md-6" style="background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 8px; width: 48%; display: flex; flex-direction: column; justify-content: space-between; min-height: 500px;">
-                    <h3 style="color: white; font-size: 1.8em;">Your Message</h3>
-                    <div class="form-group" style="margin-bottom: 15px;">
-                        <textarea id="message" placeholder="Your Message *" required style="width: 100%; padding: 15px; background-color: #333; color: #fff; font-size: 16px; border-radius: 8px; resize: none;"></textarea>
+                <form id="contactForm">
+                    <div style="margin-bottom: 15px;">
+                        <input type="text" id="first_name" placeholder="First Name *" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
                     </div>
-                    <div class="form-group" style="margin-bottom: 15px;">
-                        <input type="date" id="service_date" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
+                    <div style="margin-bottom: 15px;">
+                        <input type="text" id="last_name" placeholder="Last Name *" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
                     </div>
-                    <div class="form-group" style="margin-bottom: 15px;">
-                        <input type="time" id="service_time" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
+                    <div style="margin-bottom: 15px;">
+                        <input type="tel" id="phone_number" placeholder="Phone Number *" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
                     </div>
-                    <div id="date-time-error" style="background-color: #e74c3c; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; text-align: center; display: none;">Invalid date/time selected. Please follow our working hours!</div>
-                    <button type="button" id="submitButton" style="padding: 12px 25px; background-color: #1ee2e7; border: none; border-radius: 50px; color: #333; font-size: 16px; text-transform: uppercase; cursor: pointer; width: 100%; margin-top: 20px; transition: background-color 0.3s ease;">Submit</button>
-                </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="text" id="farm_location" placeholder="Farm Location *" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="number" id="farm_size" placeholder="Farm Size (acres) *" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    </div>
+                    <div style="margin-bottom: 15px; text-align: left;">
+                        <label><input type="checkbox" name="services" value="Crop Monitoring" style="margin-right: 5px;">Crop Monitoring</label><br>
+                        <label><input type="checkbox" name="services" value="Fertilizer Application" style="margin-right: 5px;">Fertilizer Application</label><br>
+                        <label><input type="checkbox" name="services" value="Crops Spraying" style="margin-right: 5px;">Crops Spraying</label>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <textarea id="message" placeholder="Your Message *" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; min-height: 80px;"></textarea>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="date" id="service_date" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="time" id="service_time" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    </div>
+                    <div style="display: none; background-color: red; padding: 10px; margin-bottom: 20px;" id="date-time-error">Invalid date/time selected. Please follow our working hours!</div>
+                    <button type="button" id="submitButton" style="padding: 10px 20px; background-color: green; color: white; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+                </form>
             </div>
         </section>
     
         <script>
-            document.getElementById('submitButton').addEventListener('click', function(event) {
-                event.preventDefault();
+            document.getElementById('submitButton').addEventListener('click', function() {
+                const fields = ['first_name', 'last_name', 'phone_number', 'farm_location', 'farm_size', 'message', 'service_date', 'service_time'];
+                let error = false;
     
-                // Clear previous error states
-                document.querySelectorAll('.form-group input, .form-group textarea').forEach(function(input) {
-                    input.style.border = '1px solid #ccc';
-                    input.style.backgroundColor = '#333';
+                fields.forEach(function(field) {
+                    const input = document.getElementById(field);
+                    if (!input.value.trim()) {
+                        input.style.border = '2px solid red';
+                        error = true;
+                    } else {
+                        input.style.border = '1px solid #ccc';
+                    }
                 });
-                document.getElementById('error-message').style.display = 'none';
-                document.getElementById('date-time-error').style.display = 'none';
     
-                // Get form inputs
+                if (error) {
+                    document.getElementById('error-message').style.display = 'block';
+                    return;
+                } else {
+                    document.getElementById('error-message').style.display = 'none';
+                }
+    
+                const date = document.getElementById('service_date').value;
+                const time = document.getElementById('service_time').value;
+                const hour = parseInt(time.split(':')[0]);
+                const day = new Date(date).getDay();
+    
+                if ((day >= 1 && day <= 5 && (hour < 8 || hour >= 17)) || (day === 6 && (hour < 10 || hour >= 14))) {
+                    document.getElementById('date-time-error').style.display = 'block';
+                    return;
+                } else {
+                    document.getElementById('date-time-error').style.display = 'none';
+                }
+    
+                // Collecting form data to send via mailto
                 const firstName = document.getElementById('first_name').value;
                 const lastName = document.getElementById('last_name').value;
                 const phoneNumber = document.getElementById('phone_number').value;
@@ -2366,107 +2382,21 @@ color: #333;">
                 const serviceDate = document.getElementById('service_date').value;
                 const serviceTime = document.getElementById('service_time').value;
     
-                // Check if any required field is empty
-                let hasError = false;
-                if (!firstName) {
-                    document.getElementById('first_name').style.border = '2px solid red';
-                    document.getElementById('first_name').style.backgroundColor = '#ff6666';
-                    hasError = true;
-                }
-                if (!lastName) {
-                    document.getElementById('last_name').style.border = '2px solid red';
-                    document.getElementById('last_name').style.backgroundColor = '#ff6666';
-                    hasError = true;
-                }
-                if (!phoneNumber) {
-                    document.getElementById('phone_number').style.border = '2px solid red';
-                    document.getElementById('phone_number').style.backgroundColor = '#ff6666';
-                    hasError = true;
-                }
-                if (!farmLocation) {
-                    document.getElementById('farm_location').style.border = '2px solid red';
-                    document.getElementById('farm_location').style.backgroundColor = '#ff6666';
-                    hasError = true;
-                }
-                if (!farmSize) {
-                    document.getElementById('farm_size').style.border = '2px solid red';
-                    document.getElementById('farm_size').style.backgroundColor = '#ff6666';
-                    hasError = true;
-                }
-                if (!message) {
-                    document.getElementById('message').style.border = '2px solid red';
-                    document.getElementById('message').style.backgroundColor = '#ff6666';
-                    hasError = true;
-                }
-                if (!serviceDate) {
-                    document.getElementById('service_date').style.border = '2px solid red';
-                    document.getElementById('service_date').style.backgroundColor = '#ff6666';
-                    hasError = true;
-                }
-                if (!serviceTime) {
-                    document.getElementById('service_time').style.border = '2px solid red';
-                    document.getElementById('service_time').style.backgroundColor = '#ff6666';
-                    hasError = true;
-                }
-    
-                if (hasError) {
-                    document.getElementById('error-message').style.display = 'block';
-                    return;
-                }
-    
-                // Date and Time Validation
-                const currentDate = new Date();
-                const selectedDate = new Date(serviceDate);
-                const serviceHour = parseInt(serviceTime.split(':')[0]);
-                const dayOfWeek = selectedDate.getDay();
-    
-                // Weekdays: Monday to Friday: 8am to 5pm
-                if (dayOfWeek >= 1 && dayOfWeek <= 5) {
-                    if (serviceHour < 8 || serviceHour >= 17) {
-                        document.getElementById('date-time-error').style.display = 'block';
-                        return;
-                    }
-                }
-    
-                // Saturday: 10am to 2pm
-                if (dayOfWeek === 6) {
-                    if (serviceHour < 10 || serviceHour >= 14) {
-                        document.getElementById('date-time-error').style.display = 'block';
-                        return;
-                    }
-                }
-    
-                // Generate mailto link
                 const services = document.querySelectorAll('input[type="checkbox"]:checked');
                 const servicesList = Array.from(services).map(service => service.value).join(', ');
+    
                 const mailtoLink = `mailto:skyfield.kenya@gmail.com?subject=Contact Inquiry&body=First Name: ${firstName}%0D%0ALast Name: ${lastName}%0D%0APhone Number: ${phoneNumber}%0D%0AFarm Location: ${farmLocation}%0D%0AFarm Size: ${farmSize}%0D%0AServices: ${servicesList}%0D%0AMessage: ${message}%0D%0AService Date: ${serviceDate}%0D%0AService Time: ${serviceTime}`;
     
+                // Open mailto link
                 window.location.href = mailtoLink;
     
-                // Redirect back to index.html after sending the email
+                // Optionally redirect after a short delay
                 setTimeout(function() {
                     window.location.href = 'index.html';
                 }, 1000); // Redirects after 1 second
             });
         </script>
     
-        <style>
-            @media screen and (max-width: 768px) {
-                .container {
-                    flex-direction: column;
-                    align-items: center;
-                }
-    
-                .col-md-6 {
-                    width: 100%;
-                    margin-bottom: 20px;
-                }
-    
-                #submitButton {
-                    width: 100%;
-                }
-            }
-        </style>
     </body>
     
   
@@ -2476,7 +2406,7 @@ color: #333;">
         <h2>Skyfield Aerotech</h2>
         <p>Your trusted partner in agriculture technology and services.</p>
         <div class="brand-line">
-            <p>SKYFIELD, YOUR CARING PARTNER</p>00
+            <p>SKYFIELD, YOUR CARING PARTNER</p>
         </div>
         <!-- Social Media Icons -->
         <div class="social-icons">
