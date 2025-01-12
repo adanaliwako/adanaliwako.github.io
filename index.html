@@ -2294,84 +2294,58 @@ color: #333;">
 </div><br><br><br><br><br>
     <!--form-->
 
-    <body style="font-family: 'Roboto', sans-serif; color: white; margin: 0; padding: 0;">
+    <body style="font-family: 'Roboto', sans-serif; background-color: whitesmoke; color: white; margin: 0; padding: 0;">
         <section id="contact" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; padding: 40px; background-image: url('df.jpg'); background-size: cover; background-position: center; color: #fff; margin-top: 50px;">
-            <h2 style="text-align: center; font-family: 'Montserrat', sans-serif; color: green; font-size: 3em; margin-bottom: 10px;">
-                Contact Skyfield Aerotech
-            </h2>
-            <h3 style="text-align: center; font-family: 'Montserrat', sans-serif; color: green; margin-bottom: 20px;">
-                Get in touch with us for any inquiries
-            </h3>
-    
-            <!-- Error Message for Missing Fields -->
-            <div id="error-message" style="background-color: #e74c3c; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; text-align: center; display: none;">
-                Fill all the fields!!!
-            </div>
-    
+            <h2 style="font-size: 3em; margin-bottom: 10px; text-align: center; font-family: 'Montserrat', sans-serif; color: green;">Contact Skyfield Aerotech</h2>
+            <h3 style="font-size: 1.5em; text-align: center; color: green;">Get in touch with us for any inquiries</h3>
+            <div id="error-message" style="background-color: #e74c3c; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; text-align: center; display: none;">Fill all the fields!!!</div>
             <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: stretch; gap: 30px; width: 100%; max-width: 1200px;">
                 <div class="col-md-6" style="background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 8px; width: 48%; display: flex; flex-direction: column; justify-content: space-between; min-height: 500px;">
-                    <h3 style="text-align: center; font-family: 'Montserrat', sans-serif; color: whitesmoke;">Personal Information</h3>
+                    <h3 style="font-size: 1.8em; margin-bottom: 20px;">Personal Information</h3>
                     <form id="contactForm">
                         <div class="form-group" style="margin-bottom: 20px;">
-                            <input type="text" placeholder="First Name *" id="first_name" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
+                            <input type="text" id="first_name" placeholder="First Name *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
                         </div>
                         <div class="form-group" style="margin-bottom: 20px;">
-                            <input type="text" placeholder="Last Name *" id="last_name" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
+                            <input type="text" id="last_name" placeholder="Last Name *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
                         </div>
                         <div class="form-group" style="margin-bottom: 20px;">
-                            <input type="tel" placeholder="Phone Number *" id="phone_number" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
+                            <input type="tel" id="phone_number" placeholder="Phone Number *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
                         </div>
                         <div class="form-group" style="margin-bottom: 20px;">
-                            <input type="text" placeholder="Farm Location *" id="farm_location" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
+                            <input type="text" id="farm_location" placeholder="Farm Location *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
                         </div>
                         <div class="form-group" style="margin-bottom: 20px;">
-                            <input type="number" placeholder="Farm Size (acres) *" id="farm_size" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
+                            <input type="number" id="farm_size" placeholder="Farm Size (acres) *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
                         </div>
-                        <div class="form-group" style="margin-top: 15px;">
-                            <label style="display: block; font-size: 16px; color: #ccc;">
-                                <input type="checkbox" name="services" value="Crop Monitoring"> Crop Monitoring
-                            </label>
-                            <label style="display: block; font-size: 16px; color: #ccc;">
-                                <input type="checkbox" name="services" value="Fertilizer Application"> Fertilizer Application
-                            </label>
-                            <label style="display: block; font-size: 16px; color: #ccc;">
-                                <input type="checkbox" name="services" value="Crops Spraying"> Crops Spraying
-                            </label>
+                        <div class="form-group" style="margin-bottom: 20px;">
+                            <label><input type="checkbox" name="services" value="Crop Monitoring"> Crop Monitoring</label><br>
+                            <label><input type="checkbox" name="services" value="Fertilizer Application"> Fertilizer Application</label><br>
+                            <label><input type="checkbox" name="services" value="Crops Spraying"> Crops Spraying</label><br>
                         </div>
                     </form>
                 </div>
     
                 <div class="col-md-6" style="background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 8px; width: 48%; display: flex; flex-direction: column; justify-content: space-between; min-height: 500px;">
-                    <h3 style="text-align: center; font-family: 'Montserrat', sans-serif; color: whitesmoke;">Your Message</h3>
+                    <h3 style="font-size: 1.8em; margin-bottom: 20px;">Your Message</h3>
                     <div class="form-group" style="margin-bottom: 20px;">
-                        <textarea placeholder="Your Message *" id="message" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px; height: 180px;"></textarea>
+                        <textarea id="message" placeholder="Your Message *" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;"></textarea>
                     </div>
-    
-                    <!-- Date Picker for Service Date -->
                     <div class="form-group" style="margin-bottom: 20px;">
                         <input type="date" id="service_date" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
                     </div>
-    
-                    <!-- Time Picker for Service Time -->
                     <div class="form-group" style="margin-bottom: 20px;">
                         <input type="time" id="service_time" required style="width: 100%; padding: 15px; margin-top: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #333; color: #fff; font-size: 16px;">
                     </div>
-    
-                    <!-- Error Message for Date and Time -->
-                    <div id="date-time-error" style="background-color: #e74c3c; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; text-align: center; display: none;">
-                        Invalid date/time selected. Please follow our working hours!
-                    </div>
-    
-                    <button type="button" class="btn" id="submitButton" style="padding: 12px 25px; background-color: #1ee2e7; border: none; border-radius: 50px; color: #333; font-size: 16px; text-transform: uppercase; cursor: pointer; width: 100%; margin-top: 20px; transition: background-color 0.3s ease;">
-                        Submit
-                    </button>
+                    <div id="date-time-error" style="background-color: #e74c3c; color: white; padding: 10px; border-radius: 5px; margin-top: 10px; text-align: center; display: none;">Invalid date/time selected. Please follow our working hours!</div>
+                    <button type="button" id="submitButton" style="padding: 12px 25px; background-color: #1ee2e7; border: none; border-radius: 50px; color: #333; font-size: 16px; text-transform: uppercase; cursor: pointer; width: 100%; margin-top: 20px; margin-bottom: 18px; transition: background-color 0.3s ease;">Submit</button>
                 </div>
             </div>
         </section>
     
         <script>
             document.getElementById('submitButton').addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault();
     
                 // Clear previous error states
                 document.querySelectorAll('.form-group input, .form-group textarea').forEach(function(input) {
@@ -2391,18 +2365,42 @@ color: #333;">
                 const serviceTime = document.getElementById('service_time').value;
     
                 // Check if any required field is empty
-                if (!firstName || !lastName || !phoneNumber || !farmLocation || !farmSize || !message || !serviceDate || !serviceTime) {
+                let hasError = false;
+                if (!firstName) {
+                    document.getElementById('first_name').classList.add('error-border');
+                    hasError = true;
+                }
+                if (!lastName) {
+                    document.getElementById('last_name').classList.add('error-border');
+                    hasError = true;
+                }
+                if (!phoneNumber) {
+                    document.getElementById('phone_number').classList.add('error-border');
+                    hasError = true;
+                }
+                if (!farmLocation) {
+                    document.getElementById('farm_location').classList.add('error-border');
+                    hasError = true;
+                }
+                if (!farmSize) {
+                    document.getElementById('farm_size').classList.add('error-border');
+                    hasError = true;
+                }
+                if (!message) {
+                    document.getElementById('message').classList.add('error-border');
+                    hasError = true;
+                }
+                if (!serviceDate) {
+                    document.getElementById('service_date').classList.add('error-border');
+                    hasError = true;
+                }
+                if (!serviceTime) {
+                    document.getElementById('service_time').classList.add('error-border');
+                    hasError = true;
+                }
+    
+                if (hasError) {
                     document.getElementById('error-message').style.display = 'block';
-                    document.getElementById('error-message').textContent = 'Fill all the fields!!!';
-                    // Add error border to missing fields
-                    if (!firstName) document.getElementById('first_name').classList.add('error-border');
-                    if (!lastName) document.getElementById('last_name').classList.add('error-border');
-                    if (!phoneNumber) document.getElementById('phone_number').classList.add('error-border');
-                    if (!farmLocation) document.getElementById('farm_location').classList.add('error-border');
-                    if (!farmSize) document.getElementById('farm_size').classList.add('error-border');
-                    if (!message) document.getElementById('message').classList.add('error-border');
-                    if (!serviceDate) document.getElementById('service_date').classList.add('error-border');
-                    if (!serviceTime) document.getElementById('service_time').classList.add('error-border');
                     return;
                 }
     
@@ -2416,7 +2414,6 @@ color: #333;">
                 if (dayOfWeek >= 1 && dayOfWeek <= 5) {
                     if (serviceHour < 8 || serviceHour >= 17) {
                         document.getElementById('date-time-error').style.display = 'block';
-                        document.getElementById('date-time-error').textContent = 'Service hours are between 8 AM and 5 PM from Monday to Friday!';
                         return;
                     }
                 }
@@ -2425,25 +2422,24 @@ color: #333;">
                 if (dayOfWeek === 6) {
                     if (serviceHour < 10 || serviceHour >= 14) {
                         document.getElementById('date-time-error').style.display = 'block';
-                        document.getElementById('date-time-error').textContent = 'Service hours on Saturday are between 10 AM and 2 PM!';
                         return;
                     }
                 }
     
-                // Construct the email body
-                const emailBody = `First Name: ${firstName}\nLast Name: ${lastName}\nPhone Number: ${phoneNumber}\nFarm Location: ${farmLocation}\nFarm Size: ${farmSize}\nService Date: ${serviceDate}\nService Time: ${serviceTime}\n\nMessage: ${message}`;
+                // Generate mailto link
+                const services = document.querySelectorAll('input[type="checkbox"]:checked');
+                const servicesList = Array.from(services).map(service => service.value).join(', ');
+                const mailtoLink = `mailto:skyfield.kenya@gmail.com?subject=Contact Inquiry&body=First Name: ${firstName}%0D%0ALast Name: ${lastName}%0D%0APhone Number: ${phoneNumber}%0D%0AFarm Location: ${farmLocation}%0D%0AFarm Size: ${farmSize}%0D%0AServices: ${servicesList}%0D%0AMessage: ${message}%0D%0AService Date: ${serviceDate}%0D%0AService Time: ${serviceTime}`;
     
-                // Open the email client with the filled-out email
-                window.location.href = `mailto:skyfield.kenya@gmail.com?subject=Contact%20Form%20Submission&body=${encodeURIComponent(emailBody)}`;
+                window.location.href = mailtoLink;
+    
+                // Redirect back to index.html after sending the email
+                setTimeout(function() {
+                    window.location.href = 'index.html';
+                }, 1000); // Redirects after 1 second
             });
         </script>
-    
-        <style>
-            .error-border {
-                border: 2px solid red !important;
-                box-shadow: 0 0 5px red !important;
-            }
-        </style>
+    </body>
   
   <br><br><br><br><br><br><br><br>
     <!--footer-->
