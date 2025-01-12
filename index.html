@@ -2319,6 +2319,7 @@ color: #333;">
                         <input type="number" id="farm_size" placeholder="Farm Size (acres) *" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
                     </div>
                     <div style="margin-bottom: 15px; text-align: left;">
+                        <h3>Services</h3>
                         <label><input type="checkbox" name="services" value="Crop Monitoring" style="margin-right: 5px;">Crop Monitoring</label><br>
                         <label><input type="checkbox" name="services" value="Fertilizer Application" style="margin-right: 5px;">Fertilizer Application</label><br>
                         <label><input type="checkbox" name="services" value="Crops Spraying" style="margin-right: 5px;">Crops Spraying</label>
@@ -2398,30 +2399,64 @@ color: #333;">
         </script>
     
     </body>
-    
-  
-  <br><br><br><br><br><br><br><br>
-    <!--footer-->
-    <footer class="foot">
-        <h2>Skyfield Aerotech</h2>
-        <p>Your trusted partner in agriculture technology and services.</p>
-        <div class="brand-line">
-            <p>SKYFIELD, YOUR CARING PARTNER</p>
+ 
+  <footer style="background-color: whitesmoke; color: green; padding: 30px 20px; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="font-size: 1.8rem; font-weight: bold; color: #58a6ff;">Skyfield Aerotech</h2>
+        <p style="font-size: 1rem; color: black;">Innovating agriculture with cutting-edge technology.</p>
+        
+        <div style="margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
+            <a href="https://www.facebook.com/share/KDYp665orgNNEkGs/" target="_blank" style="font-size: 1.5rem; color: black; transition: color 0.3s, transform 0.3s;">
+                <i class="fab fa-facebook-f" style="color: black; font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://www.youtube.com/@skyfieldaerotech?si=EyUlfKF0i47St2Yz" target="_blank" style="font-size: 1.5rem; color: black; transition: color 0.3s, transform 0.3s;">
+                <i class="fab fa-youtube" style="color: black; font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/skyfield-aerotech/" target="_blank" style="font-size: 1.5rem; color: black; transition: color 0.3s, transform 0.3s;">
+                <i class="fab fa-linkedin-in" style="color: black; font-size: 1.5rem;"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" style="font-size: 1.5rem; color: black; transition: color 0.3s, transform 0.3s;">
+                <i class="fab fa-instagram" style="color: black; font-size: 1.5rem;"></i>
+            </a>
+            <!-- TikTok Icon -->
+            <a href="https://www.tiktok.com" target="_blank" style="font-size: 1.5rem; color: black; transition: color 0.3s, transform 0.3s;">
+                <i class="fab fa-tiktok" style="color: black; font-size: 1.5rem;"></i>
+            </a>
+            <!-- X (Twitter) Icon -->
+            <a href="https://x.com" target="_blank" style="font-size: 1.5rem; color: black; transition: color 0.3s, transform 0.3s;">
+                <i class="fab fa-x" style="color: black; font-size: 1.5rem;"></i>
+            </a>
         </div>
-        <!-- Social Media Icons -->
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank">Facebook</a>
-            <a href="https://www.youtube.com/@skyfieldaerotech?si=EyUlfKF0i47St2Yz" target="_blank">Youtube</a>
-            <a href="https://www.linkedin.com/company/skyfield-aerotech/" target="_blank">LinkedIn</a>
-            <a href="https://instagram.com" target="_blank">Instagram</a>
+
+        <div style="margin-top: 20px;">
+            <p style="font-size: 1rem;">Email: <a href="mailto:skyfield.kenya@gmail.com" style="color: black; text-decoration: none; font-weight: bold;">skyfield.kenya@gmail.com</a></p>
+            <p style="font-size: 1rem;">Phone: <a href="tel:+254115037380" style="color: black; text-decoration: none; font-weight: bold;">+254 115 037 380</a></p>
         </div>
-        <!-- Contact Information -->
-        <div class="contact-info">
-            <p>Contact us: <a href="mailto:skyfield.kenya@gmail.com">skyfield.kenya@gmail.com</a></p>
-            <p>Phone: +254115037380</p>
-        </div>
-    </footer>
-    <script src="scripts.js"></script>
+    </div>
+
+    <div style="margin-top: 30px; padding-top: 10px; border-top: 1px solid black;">
+        <p style="font-size: 0.9rem; color: black;">&copy; 2025 Skyfield Aerotech. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Link to Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+<script>
+    // Hover effect for icons
+    const socialIcons = document.querySelectorAll('footer a');
+    socialIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.color = '#58a6ff';
+            this.style.transform = 'scale(1.2)';
+        });
+        icon.addEventListener('mouseleave', function() {
+            this.style.color = 'black';
+            this.style.transform = 'scale(1)';
+        });
+    });
+</script>
+
 </body>
 
 </html>
