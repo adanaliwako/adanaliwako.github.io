@@ -1965,75 +1965,7 @@ margin-bottom: 0;
         </div>
     </div>
 
-    <div style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; background-color: whitesmoke; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; color: #fff;">
-
-        <!-- Heading with scrolling effect -->
-        <h1 style="font-size: 2.5em; font-weight: bold; color: green; white-space: nowrap; overflow: hidden; position: relative; animation: slideRightToLeft 10s linear infinite; margin-bottom: 20px;">
-            JOIN THE MARKETPLACE
-        </h1>
     
-        <!-- Row Layout for Image and Description (Flexbox) -->
-        <div style="display: flex; justify-content: center; align-items: stretch; width: 100%; margin-top: 20px;">
-    
-            <!-- Image Section with 30% width and equal height to the description -->
-            <div style="width: 30%; margin-right: 5%; position: relative; display: flex; align-items: center; justify-content: center; height: 100%;">
-                <img src="mp.jpeg" alt="Marketplace" style="width: 100%; object-fit: cover; border-radius: 15px; box-shadow: 0 0 20px rgba(0, 255, 0, 0.7); height: 100%;">
-                
-                <!-- "Click Here" Button with Red Icon - Positioned at the center of the image -->
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #e60000; padding: 12px 25px; border-radius: 25px; color: #fff; font-size: 1.2em; font-weight: bold; display: flex; align-items: center; justify-content: center; animation: bounce 2s ease-in-out infinite;">
-                    <span>Click Here</span>
-                    <span style="margin-left: 8px; font-size: 1.5em;">➡️</span>
-                </div>
-            </div>
-    
-            <!-- Description Section with 60% width and equal height to the image -->
-            <div style="width: 60%; padding: 20px; background: linear-gradient(to left, green, #005500); border-radius: 12px; box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); color: #fff; font-size: 1.3em; line-height: 1.8; animation: slideUp 1.5s ease-in-out; display: flex; align-items: center; justify-content: center; height: 100%;">
-                <div style="max-width: 100%; overflow: hidden;">
-                    <p style="font-size: 1.6em; font-weight: bold; margin-bottom: 10px;">We open the door to thousands of approved buyers and sellers.</p>
-                    <p>Post your crop bid as a registered buyer, or create your crop offer as a platform-verified seller. Through our rigorous customer compliance, we ensure that only reliable users gain access to our digital marketplace. Join now and experience the future of agricultural trade!</p>
-                </div>
-            </div>
-    
-        </div>
-    
-        <!-- Inline Style for Animations and Responsiveness -->
-        <style>
-            /* Keyframes for Animation */
-            @keyframes slideRightToLeft {
-                from { transform: translateX(100%); }
-                to { transform: translateX(-100%); }
-            }
-    
-            @keyframes bounce {
-                0%, 100% { transform: translateY(0); }
-                50% { transform: translateY(-10px); }
-            }
-    
-            @keyframes slideUp {
-                from { opacity: 0; transform: translateY(30px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-    
-            /* Responsiveness for Smaller Screens */
-            @media (max-width: 768px) {
-                body { padding: 20px; }
-                h1 { font-size: 2em; }
-                .description-box { font-size: 1.1em; }
-                .image-container { width: 100%; }
-                .description-container { width: 100%; margin-top: 20px; }
-                .description-container, .image-container { height: auto; }
-            }
-    
-            @media (max-width: 480px) {
-                .description-box { font-size: 1em; padding: 15px; }
-                .image-container img { width: 100%; }
-                span { font-size: 1.5em; }
-                h1 { font-size: 1.8em; }
-                .description-container { width: 100%; padding: 15px; text-align: justify; }
-            }
-        </style>
-    
-      </div>
 
     <!--booking-->
     <!-- Booking Section -->
