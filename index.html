@@ -1965,18 +1965,18 @@ margin-bottom: 0;
         </div>
     </div>
 
-    <div style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; background-color: whitesmoke; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; color: #fff;">
+    <div style="margin: 0; padding: 0; font-family: 'Arial', sans-serif; background-color: whitesmoke; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; color: #fff;">
 
         <!-- Heading with scrolling effect -->
-        <h1 style="font-size: 2.5em; font-weight: bold; color: green; text-shadow: 0 0 15px green, 0 0 30px green, 0 0 45px green; white-space: nowrap; overflow: hidden; position: relative; animation: slideRightToLeft 10s linear infinite; margin-bottom: 20px;">
+        <h1 style="font-size: 2.5em; font-weight: bold; color: green;  white-space: nowrap; overflow: hidden; position: relative; animation: slideRightToLeft 15s linear infinite; margin-bottom: 20px;">
             JOIN THE MARKETPLACE
         </h1>
     
-        <!-- Container with Image and Description -->
-        <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; width: 90%; max-width: 1200px; margin-top: 20px;">
+        <!-- Row Layout for Image and Description (Flexbox) -->
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 20px;">
     
-            <!-- Image Section -->
-            <div style="position: relative; width: 45%; animation: wobble 3s ease-in-out infinite; margin-bottom: 20px;">
+            <!-- Image Section with 30% width -->
+            <div style="width: 30%; margin-right: 5%; position: relative;">
                 <img src="mp.jpeg" alt="Marketplace" style="width: 100%; border-radius: 15px; box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);">
     
                 <!-- "Click Here" Button with Red Icon - Positioned at the center of the image -->
@@ -1986,26 +1986,20 @@ margin-bottom: 0;
                 </div>
             </div>
     
-            <!-- Description Section -->
-            <div style="width: 45%; padding: 20px; background: linear-gradient(to left, green, #005500); border-radius: 12px; box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); color: #fff; font-size: 1.3em; line-height: 1.8; animation: slideUp 1.5s ease-in-out; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word;">
+            <!-- Description Section with 60% width -->
+            <div style="width: 60%; padding: 20px; background: linear-gradient(to left, green, #005500); border-radius: 12px; box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); color: #fff; font-size: 1.3em; line-height: 1.8; animation: slideUp 1.5s ease-in-out;">
                 <p style="font-size: 1.6em; font-weight: bold; margin-bottom: 10px;">We open the door to thousands of approved buyers and sellers.</p>
                 <p>Post your crop bid as a registered buyer, or create your crop offer as a platform-verified seller. Through our rigorous customer compliance, we ensure that only reliable users gain access to our digital marketplace. Join now and experience the future of agricultural trade!</p>
             </div>
+    
         </div>
     
-        <!-- Inline Style -->
+        <!-- Inline Style for Animations and Responsiveness -->
         <style>
             /* Keyframes for Animation */
             @keyframes slideRightToLeft {
                 from { transform: translateX(100%); }
                 to { transform: translateX(-100%); }
-            }
-    
-            @keyframes wobble {
-                0%, 100% { transform: rotate(0deg); }
-                25% { transform: rotate(-2deg); }
-                50% { transform: rotate(2deg); }
-                75% { transform: rotate(-2deg); }
             }
     
             @keyframes bounce {
