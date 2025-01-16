@@ -1965,103 +1965,36 @@ margin-bottom: 0;
         </div>
     </div>
 
-    <div style="font-family: 'Arial', sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-color: whitesmoke; overflow: hidden;">
+    <div style="font-family: 'Arial', sans-serif; margin: 0; padding: 0; box-sizing: border-box; background-color: #f5f5f5; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden;">
 
-        <!-- Full Container for Everything -->
-        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; position: relative; flex-direction: column; padding: 20px;">
+        <div style="position: relative; width: 80%; max-width: 800px; height: 60%; background-color: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;" id="container">
     
-            <!-- Animated Heading with Neon Glow and Moving Text -->
-            <h1 style="font-size: 3.5rem; color: green; text-align: center; font-weight: bold; white-space: nowrap; overflow: hidden; width: 100%; animation: moveText 15s linear infinite;">
-                JOIN THE MARKETPLACE
-            </h1>
+            <div style="position: relative; width: 100%; height: 60%; background: url('mp.jpeg') center/cover no-repeat; display: flex; justify-content: center; align-items: center;" id="imageSection">
+                <a href="#marketplace" style="position: absolute; padding: 15px 30px; background-color: #ff3333; color: white; font-size: 1.5rem; font-weight: bold; border-radius: 50px; box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease; text-align: center;">Click Here</a>
+                <div style="position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; background-color: rgba(0, 0, 0, 0.6); color: white; font-size: 24px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer;" onclick="toggleDescription()">i</div>
+            </div>
     
-            <!-- Main Content Container with Image and Description -->
-            <div style="display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1200px; background: rgba(0, 0, 0, 0.7); border-radius: 20px; box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); padding: 30px; transition: transform 0.3s ease;">
-    
-                <!-- Image Section -->
-                <div style="flex: 1; padding: 10px; position: relative; border-radius: 15px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
-                    <img src="mp.jpeg" alt="Marketplace Image" style="width: 100%; height: auto; max-height: 300px; object-fit: cover; border-radius: 15px; box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);">
-                    <!-- Button inside Image -->
-                    <a href="#marketplace" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 15px 30px; background-color: #FF3333; color: white; font-size: 1.5rem; font-weight: bold; border-radius: 50px; box-shadow: 0 0 15px rgba(255, 0, 0, 0.8); text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease;">
-                        Click Here
-                    </a>
-                </div>
-    
-                <!-- Description Section -->
-                <div style="flex: 2; padding: 15px; color: white; font-size: 1.2rem; line-height: 1.6; background: rgba(0, 0, 0, 0.8); border-radius: 15px; box-shadow: 0 0 20px rgba(0, 255, 0, 0.6); transition: transform 0.3s ease;">
-                    <p>
-                        We open the door to thousands of approved buyers and sellers. Post your crop bid as a registered buyer, or create your crop offer as a platform-verified seller. Through our rigorous customer compliance, we ensure that only reliable users gain access to our digital marketplace. Join now and experience the future of agricultural trade!
-                    </p>
-                </div>
-    
+            <h1 style="font-size: 2rem; margin: 20px 0; color: #333;">JOIN THE MARKETPLACE</h1>
+            
+            <div style="display: none; padding: 20px; font-size: 1rem; line-height: 1.5; color: #333;" id="description">
+                We open the door to thousands of approved buyers and sellers. Post your crop bid as a registered buyer, or create your crop offer as a platform-verified seller. Through our rigorous customer compliance, we ensure that only reliable users gain access to our digital marketplace. Join now and experience the future of agricultural trade!
             </div>
     
         </div>
     
-        <!-- CSS Animations -->
-        <style>
-            /* Text Movement Animation for Heading */
-            @keyframes moveText {
-                0% { transform: translateX(100%); }
-                100% { transform: translateX(-100%); }
-            }
-    
-            /* Neon Glow Animation for Heading */
-            @keyframes glow {
-                0% { text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green, 0 0 40px green; }
-                50% { text-shadow: 0 0 10px #ff3333, 0 0 20px #ff3333, 0 0 30px #ff3333, 0 0 40px #ff3333; }
-                100% { text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green, 0 0 40px green; }
-            }
-    
-            /* Button Hover Animation */
-            a:hover {
-                background-color: #ff6666;
-                transform: scale(1.1);
-            }
-    
-            /* Mobile Responsiveness */
-            @media (max-width: 768px) {
-                h1 {
-                    font-size: 2.5rem;
-                }
-    
-                .full {
-                    padding: 10px;
-                }
-    
-                .marketplace-container {
-                    flex-direction: column;
-                }
-    
-                .image-container, .description {
-                    width: 100%;
-                }
-    
-                a {
-                    font-size: 1.2rem;
-                    padding: 10px 20px;
-                }
-    
-                .description {
-                    font-size: 1rem;
+        <script>
+            function toggleDescription() {
+                const description = document.getElementById('description');
+                const imageSection = document.getElementById('imageSection');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    imageSection.style.height = '40%';
+                } else {
+                    description.style.display = 'none';
+                    imageSection.style.height = '60%';
                 }
             }
-    
-            @media (max-width: 480px) {
-                h1 {
-                    font-size: 2rem;
-                }
-    
-                a {
-                    font-size: 1rem;
-                    padding: 8px 15px;
-                }
-    
-                .description {
-                    font-size: 0.9rem;
-                }
-            }
-        </style>
+        </script>
     
       </div>
 
