@@ -891,7 +891,7 @@
         margin: 0;
         padding-top: 80px;
         /* Adjust this value based on the height of your header */
-        font-family: Arial, sans-serif;
+       font-family: Arial, Helvetica, sans-serif;
         background-color: #f4f4f4;
         color: #333;
     }
@@ -1758,9 +1758,10 @@ margin-bottom: 0;
     box-shadow: 0 0 10px red;
 }
 </style>
+
 <div class="kichwa">
     <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
-        <a href="#" style="display: flex; align-items: center;" >
+        <a href="#" style="display: flex; align-items: center; color: whitesmoke;" >
             <img src="logo.png" alt="Company Logo" style="height: 50px;"> <b>SKYFIELD AEROTECH</b>
         </a>
         <div class="hamburger" id="hamburger">
@@ -2328,7 +2329,7 @@ color: #333;">
 </div>
     <!--form-->
 
-    <body style="font-family: Arial, sans-serif; background-color: whitesmoke; color: white; margin: 0; padding: 0; text-align: center;">
+    <div style="font-family: Arial, sans-serif; background-color: whitesmoke; color: white; margin: 0; padding: 0; text-align: center;">
 
         <section style="background-image: url('df.jpg'); background-size: cover; background-position: center; padding: 40px; color: white;">
             <div style="background-color: rgba(0, 0, 0, 0.6); padding: 40px; border-radius: 8px; width: 90%; max-width: 900px; margin: auto;">
@@ -2353,13 +2354,12 @@ color: #333;">
                         <input type="number" id="farm_size" placeholder="Farm Size (acres) *" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
                     </div>
                     <div style="margin-bottom: 15px; text-align: left;">
-                        <h3>Services</h3>
                         <label><input type="checkbox" name="services" value="Crop Monitoring" style="margin-right: 5px;">Crop Monitoring</label><br>
                         <label><input type="checkbox" name="services" value="Fertilizer Application" style="margin-right: 5px;">Fertilizer Application</label><br>
                         <label><input type="checkbox" name="services" value="Crops Spraying" style="margin-right: 5px;">Crops Spraying</label>
                     </div>
                     <div style="margin-bottom: 15px;">
-                        <textarea id="message" placeholder="Your Message *" required style="width: 100%; padding: 10px; border-radius: 5px;resize: none; border: 1px solid #ccc; min-height: 80px;"></textarea>
+                        <textarea id="message" placeholder="Your Message *" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; min-height: 80px;resize: none;"></textarea>
                     </div>
                     <div style="margin-bottom: 15px;">
                         <input type="date" id="service_date" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
@@ -2400,7 +2400,9 @@ color: #333;">
                 const hour = parseInt(time.split(':')[0]);
                 const day = new Date(date).getDay();
     
-                if ((day >= 1 && day <= 5 && (hour < 8 || hour >= 17)) || (day === 6 && (hour < 10 || hour >= 14))) {
+                if (day === 0 || 
+                    (day >= 1 && day <= 5 && (hour < 8 || hour >= 17)) || 
+                    (day === 6 && (hour < 10 || hour >= 16))) {
                     document.getElementById('date-time-error').style.display = 'block';
                     return;
                 } else {
@@ -2432,7 +2434,7 @@ color: #333;">
             });
         </script>
     
-    </body>
+    </div>
  
   <footer style="background-color: whitesmoke; color: green; padding: 30px 20px; text-align: center;">
     <div style="max-width: 1200px; margin: 0 auto;">
