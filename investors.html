@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest with Skyfield Aerotech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #0072ff, #00c6ff);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: fadeInDown 2s;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: fadeInUp 2s;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s;
+            vertical-align: top;
+        }
+
+        .highlight-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box:hover {
+            transform: scale(1.05);
+        }
+
+        .invest-button {
+            padding: 15px 30px;
+            background: #0072ff;
+            color: white;
+            text-transform: uppercase;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+        }
+
+        .invest-button:hover {
+            background: #005bb5;
+        }
+
+        .animation-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .animated-card {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background: #00c6ff;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .animated-card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+
+        .animated-card span {
+            z-index: 1;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 15px rgba(0, 114, 255, 0.6);
+            }
+
+            50% {
+                box-shadow: 0 0 25px rgba(0, 114, 255, 1);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        /* Keyframes for Sliding in the Cards */
+        @keyframes slideIn {
+            0% { transform: translateY(100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Styling for Card Containers */
+        .planet-business {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background-color: #fff;
+            width: 300px;
+            height: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-content ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .card-content li {
+            padding: 10px 0;
+            font-size: 1.1em;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .card-content a {
+            color: #0078d4;
+            text-decoration: none;
+        }
+
+        .card-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            .planet-business {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Skyfield Aerotech: Revolutionizing Agriculture</h1>
+        <p>Join us in transforming the future of agriculture through innovation and technology.</p>
+    </header>
+
+    <section class="section">
+        <h2>Why Invest in Skyfield Aerotech?</h2>
+        <h3> Unmatched Market Potential</h3>
+        <p>
+        <ul style="list-style-type: disc;        /* Use standard bullet points */
+        padding: 0;                   /* Remove default padding */
+        margin: 0;                    /* Remove default margin */
+        display: flex;                /* Align list items in a row */
+        flex-wrap: wrap;">
+
+            <li style="display: inline-block;        /* Align list items horizontally */
+            margin-right: 10px;           /* Space between items */
+            list-style-position: inside;">
+
+                Target Market: Over 26,000 acres of rice farms in Mwea, Kenya,
+                with plans to expand into horticultural and cash crops.
+            </li>
+            <li style="display: inline-block;        /* Align list items horizontally */
+            margin-right: 10px;           /* Space between items */
+            list-style-position: inside;">
+                Cost Advantage: Farmers currently spend Ksh 500 per acre for
+                manual spraying. Skyfield Aerotech offers the same service at just
+                Ksh 350 per acre, saving farmers 30% while increasing efficiency.
+
+            </li>
+            <li style="display: inline-block;        /* Align list items horizontally */
+            margin-right: 10px;           /* Space between items */
+            list-style-position: inside;">
+
+                No Competitors: Currently, no organizations in Mwea are
+                providing this service, giving Skyfield Aerotech a first-mover
+                advantage.
+            </li>
+            <li style="display: inline-block;        /* Align list items horizontally */
+            margin-right: 10px;           /* Space between items */
+            list-style-position: inside;">
+
+                Growing Demand:Precision agriculture is on the rise,
+                addressing inefficiencies and supporting sustainable farming.</p>
+            </li>
+        </ul>
+        <div class="animation-container">
+            <div class="highlight-box">
+                <img src="innovation.jpg" alt="Innovation">
+                <h3>Innovation</h3>
+                <p>Leading the way with cutting-edge aerotech solutions.</p>
+            </div>
+            <div class="highlight-box">
+                <img src="impact.png" alt="Impact">
+                <h3>Impact</h3>
+                <p>Driving sustainable growth in global agriculture.</p>
+            </div>
+            <div class="highlight-box">
+                <img src="growth.jpg" alt="Growth">
+                <h3>Growth</h3>
+                <p>Expanding markets with proven strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Our Vision</h2>
+        <div class="animation-container">
+            <div class="animated-card">
+                <img src="efficiency.jpg" alt="Efficiency">
+                <span>Efficiency</span>
+            </div>
+            <div class="animated-card">
+                <img src="sustainability.jpg" alt="Sustainability">
+                <span>Sustainability</span>
+            </div>
+            <div class="animated-card">
+                <img src="innovation-card.jpg" alt="Innovation">
+                <span>Innovation</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Invest Now</h2>
+        <p>Be part of the revolution. Secure your future with Skyfield Aerotech.</p>
+        <button class="invest-button"> <a style="text-decoration: none; color: #fff;" href="mailto: skyfield.kenya@gmail.com">Join Us</a></button>
+    </section>
+    <div class="planet-business">
+        <!-- Card for Proven Business Model -->
+        <div class="card" style="animation: slideIn 1s ease-out;">
+            <h3 style="font-size: 1.8em; font-weight: 600; color: #333;">Proven Business Model</h3>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Revenue Projections:</strong> Ksh 31.5 million in Year 1.</li>
+                    <li><strong>Drone Efficiency:</strong> Ksh 50 million from 5 drones.</li>
+                    <li><strong>Scalability:</strong> Expanding into Ahero and Bura.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card for Environmental and Social Impact -->
+        <div class="card" style="animation: slideIn 1s ease-out;">
+            <h3 style="font-size: 1.8em; font-weight: 600; color: #333;">Environmental & Social Impact</h3>
+            <div class="card-content">
+                <ul>
+                    <li>Reduced chemical waste and environmental footprint.</li>
+                    <li>Improved productivity and food security for farmers.</li>
+                    <li>Supporting climate-smart agriculture.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card for Financial Highlights -->
+        <div class="card" style="animation: slideIn 1s ease-out;">
+            <h3 style="font-size: 1.8em; font-weight: 600; color: #333;">Financial Highlights</h3>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Funding Requirements:</strong> Ksh 7 million.</li>
+                    <li><strong>Projected Growth:</strong> Ksh 52 million in Year 2.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card for What Makes Us Stand Out -->
+        <div class="card" style="animation: slideIn 1s ease-out;">
+            <h3 style="font-size: 1.8em; font-weight: 600; color: #333;">What Makes Us Stand Out?</h3>
+            <div class="card-content">
+                <ul>
+                    <li>Cost Savings: Save Ksh 150 per acre.</li>
+                    <li>Innovation-Driven: Advanced drone technology.</li>
+                    <li>Sustainability Focus: Reduces resource wastage.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card for Join Us in Transforming Agriculture -->
+        <div class="card" style="animation: slideIn 1s ease-out;">
+            <h3 style="font-size: 1.8em; font-weight: 600; color: #333;">Join Us in Transforming Agriculture</h3>
+            <div class="card-content">
+                <p>Your investment will enable us to scale operations to reach 5,000 farmers, expand to new regions, and drive impactful change in agricultural efficiency.</p>
+            </div>
+        </div>
+
+        <!-- Card for Get Involved -->
+        <div class="card" style="animation: slideIn 1s ease-out;">
+            <h3 style="font-size: 1.8em; font-weight: 600; color: #333;">Get Involved</h3>
+            <div class="card-content">
+                <p>Partner with us to make farming more efficient, sustainable, and profitable.</p>
+                <ul>
+                    <li><strong>Download Business Plan:</strong> <a href="#">[Link]</a></li>
+                    <li><strong>Contact Us:</strong> <a style="text-decoration: none;" href="mailto:skyfield.kenya@gmail.com">skyfield.kenya@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
