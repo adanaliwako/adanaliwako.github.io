@@ -1772,11 +1772,6 @@
         box-shadow: 0 0 10px red;
     }
     .kikuyu {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
             position: relative;
             height: 100vh;
             display: flex;
@@ -1785,6 +1780,11 @@
             text-align: center;
             color: white;
             background: rgba(0, 0, 0, 0.5);
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
         }
 
         .luo {
@@ -1797,6 +1797,7 @@
 
         .maasai {
             z-index: 1;
+            padding: 20px;
             animation: fadeIn 2s ease-in-out;
         }
 
@@ -1842,6 +1843,31 @@
         @keyframes fadeInText {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .kalenjin {
+                font-size: 2.5rem;
+            }
+
+            .meru {
+                font-size: 1.2rem;
+            }
+
+            .maasai {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .kalenjin {
+                font-size: 2rem;
+            }
+
+            .meru {
+                font-size: 1rem;
+            }
         }
 </style>
 
