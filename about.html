@@ -1,496 +1,760 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Skyfield Aerotech</title>
-    <link rel="icon" type="image/png" href="https://www.skyfieldaerotech.co.ke/logo.png">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.skyfieldaerotech.co.ke/logo.png"
+    />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
-        <div class="row align-items-center top-bar">
-            <div class="col-lg-3 col-md-12 text-center text-lg-start">
-                <a href="#" style="display: flex; align-items: center; color: #013220; font-weight: bolder;">
-                    <img src="logo.png" alt="Company Logo" style="height: 50px;"> <b>SKYFIELD AEROTECH</b>
-                </a>
-            </div>
-            <div class="col-lg-9 col-md-12 text-end">
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="fa fa-map-marker-alt text-primary me-2"></i>
-                    <p class="m-0">HQ: MWEA, KENYA</p>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center me-4">
-                    <i class="far fa-envelope-open text-primary me-2"></i>
-                    <p class="m-0">skyfield.kenya@gmail.com</p>
-                </div>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social" style="color: black;" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social" style="color: black;" href="https://www.facebook.com/share/KDYp665orgNNEkGs/"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social" style="color: black;"
-                        href="https://www.youtube.com/@skyfieldaerotech?si=EyUlfKF0i47St2Yz"><i
-                            class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social"style="color: black;"
-                        href="https://www.linkedin.com/company/skyfield-aerotech/"><i
-                            class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
+      <div class="row align-items-center top-bar">
+        <div class="col-lg-3 col-md-12 text-center text-lg-start">
+          <a
+            href="#"
+            style="
+              display: flex;
+              align-items: center;
+              color: #013220;
+              font-weight: bolder;
+            "
+          >
+            <img src="logo.png" alt="Company Logo" style="height: 50px" />
+            <b>SKYFIELD AEROTECH</b>
+          </a>
         </div>
+        <div class="col-lg-9 col-md-12 text-end">
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <i class="fa fa-map-marker-alt text-primary me-2"></i>
+            <p class="m-0">HQ: MWEA, KENYA</p>
+          </div>
+          <div class="h-100 d-inline-flex align-items-center me-4">
+            <i class="far fa-envelope-open text-primary me-2"></i>
+            <p class="m-0">skyfield.kenya@gmail.com</p>
+          </div>
+          <div class="d-flex pt-2">
+            <a
+              class="btn btn-outline-light btn-social"
+              style="color: black"
+              href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="btn btn-outline-light btn-social"
+              style="color: black"
+              href="https://www.facebook.com/share/KDYp665orgNNEkGs/"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-outline-light btn-social"
+              style="color: black"
+              href="https://www.youtube.com/@skyfieldaerotech?si=EyUlfKF0i47St2Yz"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a
+              class="btn btn-outline-light btn-social"
+              style="color: black"
+              href="https://www.linkedin.com/company/skyfield-aerotech/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid nav-bar bg-light">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4">
-            <a href="" class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none">
-                <h1 class="text-primary m-0">SKYFIELD AEROTECH</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav me-auto">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link active" style="color:red; font: bolder;">About</a>
-                    <a href="https://tujueukulima.netlify.app/" class="nav-item nav-link">Tujue-ukulima</a>
-                    <a href="index.html" class="nav-item nav-link">Skyfield-soko</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu fade-up m-0">
-                            <a href="booking.html" class="dropdown-item">Booking</a>
-                            <a href="team.html" class="dropdown-item">Technicians</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center">
-                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
-                        style="width: 45px; height: 45px;">
-                        <i class="fa fa-phone-alt text-primary"></i>
-                    </div>
-                    <div class="ms-3">
-                        <p class="mb-1 text-white">Our Helpline:</p>
-                        <h5 class="m-0 text-secondary">+254 115 037 380</h5>
-                    </div>
-                </div>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white p-3 py-lg-0 px-lg-4"
+      >
+        <a
+          href=""
+          class="navbar-brand d-flex align-items-center m-0 p-0 d-lg-none"
+        >
+          <h1 class="text-primary m-0">SKYFIELD AEROTECH</h1>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav me-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a
+              href="about.html"
+              class="nav-item nav-link active"
+              style="color: red; font: bolder"
+              >About</a
+            >
+            <a
+              href="https://tujueukulima.netlify.app/"
+              class="nav-item nav-link"
+              >Tujue-ukulima</a
+            >
+            <a href="index.html" class="nav-item nav-link">Skyfield-soko</a>
+            <a href="service.html" class="nav-item nav-link">Services</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Pages</a
+              >
+              <div class="dropdown-menu fade-up m-0">
+                <a href="booking.html" class="dropdown-item">Booking</a>
+                <a href="team.html" class="dropdown-item">Technicians</a>
+                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                <a
+                  href="https://skyfieldclub.netlify.app/"
+                  class="dropdown-item"
+                  >R&D Hub</a
+                >
+                <a href="404.html" class="dropdown-item">404 Page</a>
+              </div>
             </div>
-        </nav>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <div
+            class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4 bg-primary d-flex align-items-center"
+          >
+            <div
+              class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+              style="width: 45px; height: 45px"
+            >
+              <i class="fa fa-phone-alt text-primary"></i>
+            </div>
+            <div class="ms-3">
+              <p class="mb-1 text-white">Our Helpline:</p>
+              <h5 class="m-0 text-secondary">+254 115 037 380</h5>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
     <!-- Navbar End -->
 
-
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 py-5">
-        <div class="container">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb text-uppercase">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">About</li>
-                    
-                </ol>
-            </nav>
-        </div>
+      <div class="container">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb text-uppercase">
+            <li class="breadcrumb-item">
+              <a class="text-white" href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a class="text-white" href="#">Pages</a>
+            </li>
+            <li class="breadcrumb-item text-white active" aria-current="page">
+              About
+            </li>
+          </ol>
+        </nav>
+      </div>
     </div>
     <!-- Page Header End -->
 
-
     <!-- Service Start -->
     <div class="container-fluid py-5 px-4 px-lg-0">
-        <div class="row g-0">
-            <div class="col-lg-3 d-none d-lg-flex">
-                <div class="d-flex align-items-center justify-content-center bg-primary w-100 h-100">
-                    <h1 class="display-3 text-white m-0" style="transform: rotate(-90deg);">Revolutionizing agriculture
-                    </h1>
-                </div>
-            </div>
-            <div class="col-md-12 col-lg-9">
-                <div class="ms-lg-5 ps-lg-5">
-                    <div class="text-center text-lg-start wow fadeInUp" data-wow-delay="0.1s">
-                        <h6 class="text-secondary text-uppercase">Our Services</h6>
-                        <h1 class="mb-5">Explore Our Services</h1>
-                    </div>
-                    <div class="owl-carousel service-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="bg-light p-4">
-                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
-                                style="width: 75px; height: 75px;">
-                                <i class="fa fa-chart-line fa-2x text-primary"></i>
-                            </div>
-                            <h4 class="mb-3">Crop monitoring</h4>
-                            <p>Real-time crop health monitoring using drones equipped with multispectral and thermal
-                                sensors.
-                                Early detection of issues helps you take proactive measures to improve crop performance.
-                            </p><br><br>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Quality
-                                Service</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Customer
-                                Satisfaction</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Expert
-                                support</p>
-                            <a href="https://v0-crop-monitoring.vercel.app/" class="btn bg-white text-primary w-100 mt-2">Read More<i
-                                    class="fa fa-arrow-right text-secondary ms-2"></i></a>
-                        </div>
-                        <div class="bg-light p-4">
-                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
-                                style="width: 75px; height: 75px;">
-                                <i class="fa fa-seedling fa-2x text-success"></i>
-                            </div>
-                            <h4 class="mb-3">Fertilizer application</h4>
-                            <p>Precise fertilizer application tailored to crop needs, promoting optimal growth and
-                                maximizing
-                                yield potential.</p><br><br><br><br>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Quality
-                                Service</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Customer
-                                Satisfaction</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Expert
-                                support</p>
-                            <a href="https://v0-fertilizer-application.vercel.app/" class="btn bg-white text-primary w-100 mt-2">Read More<i
-                                    class="fa fa-arrow-right text-secondary ms-2"></i></a>
-                        </div>
-                        <div class="bg-light p-4">
-                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
-                                style="width: 75px; height: 75px;">
-                                <i class="fa fa-shower fa-2x text-primary"></i>
-                            </div>
-                            <h4 class="mb-3">Crop spraying</h4>
-                            <p>Our drone-based spraying services provide precise, fast, and cost-effective application
-                                of
-                                pesticides, fertilizers, and herbicides. Using GPS-guided technology, we ensure accurate
-                                delivery of chemicals, reducing waste and environmental impact.</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Quality
-                                Service</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Customer
-                                Satisfaction</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Expert
-                                support</p>
-                            <a href="market.html" class="btn bg-white text-primary w-100 mt-2">Read More<i
-                                    class="fa fa-arrow-right text-secondary ms-2"></i></a>
-                        </div>
-                        <div class="bg-light p-4">
-                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
-                                style="width: 75px; height: 75px;">
-                                <i class="fa fa-headset fa-2x text-primary"></i>
-                            </div>
-                            <h4 class="mb-3">Expert support</h4>
-                            <p>Skyfield Aerotech offers expert support through tailored drone technology solutions designed for smallholder farmers. By providing training, troubleshooting, and maintenance, they ensure effective use of drones for irrigation, spraying, and crop monitoring.</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Quality
-                                Service</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Customer
-                                Satisfaction</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Expert
-                                support</p>
-                            <a href="https://tujueukulima.netlify.app/" class="btn bg-white text-primary w-100 mt-2">Read More<i
-                                    class="fa fa-arrow-right text-secondary ms-2"></i></a>
-                        </div>
-                        <div class="bg-light p-4">
-                            <div class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
-                                style="width: 75px; height: 75px;">
-                                <i class="fas fa-shopping-basket fa-2x text-primary"></i>
-                            </div>
-                            <h4 class="mb-3">Skyfield-soko</h4>
-                            <p>Skyfield-Soko is a vibrant online marketplace connecting farmers and buyers across Kenya, offering real-time bidding, fair prices, and wide access to cereals, fruits, vegetables, and more — all from your phone!</p>
-                            <p>Skyfield-Soko, Where Harvest Meets Hustle!”Skyfield Soko – Shamba Lako, Soko Lako!</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Quality
-                                Service</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Customer
-                                Satisfaction</p>
-                            <p class="text-primary fw-medium"><i class="fa fa-check text-success me-2"></i>Expert
-                                support</p>
-                            <a href="" class="btn bg-white text-primary w-100 mt-2">Read More<i
-                                    class="fa fa-arrow-right text-secondary ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="row g-0">
+        <div class="col-lg-3 d-none d-lg-flex">
+          <div
+            class="d-flex align-items-center justify-content-center bg-primary w-100 h-100"
+          >
+            <h1
+              class="display-3 text-white m-0"
+              style="transform: rotate(-90deg)"
+            >
+              Revolutionizing agriculture
+            </h1>
+          </div>
         </div>
+        <div class="col-md-12 col-lg-9">
+          <div class="ms-lg-5 ps-lg-5">
+            <div
+              class="text-center text-lg-start wow fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <h6 class="text-secondary text-uppercase">Our Services</h6>
+              <h1 class="mb-5">Explore Our Services</h1>
+            </div>
+            <div
+              class="owl-carousel service-carousel position-relative wow fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <div class="bg-light p-4">
+                <div
+                  class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
+                  style="width: 75px; height: 75px"
+                >
+                  <i class="fa fa-chart-line fa-2x text-primary"></i>
+                </div>
+                <h4 class="mb-3">Crop monitoring</h4>
+                <p>
+                  Real-time crop health monitoring using drones equipped with
+                  multispectral and thermal sensors. Early detection of issues
+                  helps you take proactive measures to improve crop performance.
+                </p>
+                <br /><br />
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Quality Service
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Customer
+                  Satisfaction
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Expert support
+                </p>
+                <a
+                  href="https://v0-crop-monitoring.vercel.app/"
+                  class="btn bg-white text-primary w-100 mt-2"
+                  >Read More<i class="fa fa-arrow-right text-secondary ms-2"></i
+                ></a>
+              </div>
+              <div class="bg-light p-4">
+                <div
+                  class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
+                  style="width: 75px; height: 75px"
+                >
+                  <i class="fa fa-seedling fa-2x text-success"></i>
+                </div>
+                <h4 class="mb-3">Fertilizer application</h4>
+                <p>
+                  Precise fertilizer application tailored to crop needs,
+                  promoting optimal growth and maximizing yield potential.
+                </p>
+                <br /><br /><br /><br />
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Quality Service
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Customer
+                  Satisfaction
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Expert support
+                </p>
+                <a
+                  href="https://v0-fertilizer-application.vercel.app/"
+                  class="btn bg-white text-primary w-100 mt-2"
+                  >Read More<i class="fa fa-arrow-right text-secondary ms-2"></i
+                ></a>
+              </div>
+              <div class="bg-light p-4">
+                <div
+                  class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
+                  style="width: 75px; height: 75px"
+                >
+                  <i class="fa fa-shower fa-2x text-primary"></i>
+                </div>
+                <h4 class="mb-3">Crop spraying</h4>
+                <p>
+                  Our drone-based spraying services provide precise, fast, and
+                  cost-effective application of pesticides, fertilizers, and
+                  herbicides. Using GPS-guided technology, we ensure accurate
+                  delivery of chemicals, reducing waste and environmental
+                  impact.
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Quality Service
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Customer
+                  Satisfaction
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Expert support
+                </p>
+                <a
+                  href="market.html"
+                  class="btn bg-white text-primary w-100 mt-2"
+                  >Read More<i class="fa fa-arrow-right text-secondary ms-2"></i
+                ></a>
+              </div>
+              <div class="bg-light p-4">
+                <div
+                  class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
+                  style="width: 75px; height: 75px"
+                >
+                  <i class="fa fa-headset fa-2x text-primary"></i>
+                </div>
+                <h4 class="mb-3">Expert support</h4>
+                <p>
+                  Skyfield Aerotech offers expert support through tailored drone
+                  technology solutions designed for smallholder farmers. By
+                  providing training, troubleshooting, and maintenance, they
+                  ensure effective use of drones for irrigation, spraying, and
+                  crop monitoring.
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Quality Service
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Customer
+                  Satisfaction
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Expert support
+                </p>
+                <a
+                  href="https://tujueukulima.netlify.app/"
+                  class="btn bg-white text-primary w-100 mt-2"
+                  >Read More<i class="fa fa-arrow-right text-secondary ms-2"></i
+                ></a>
+              </div>
+              <div class="bg-light p-4">
+                <div
+                  class="d-flex align-items-center justify-content-center border border-5 border-white mb-4"
+                  style="width: 75px; height: 75px"
+                >
+                  <i class="fas fa-shopping-basket fa-2x text-primary"></i>
+                </div>
+                <h4 class="mb-3">Skyfield-soko</h4>
+                <p>
+                  Skyfield-Soko is a vibrant online marketplace connecting
+                  farmers and buyers across Kenya, offering real-time bidding,
+                  fair prices, and wide access to cereals, fruits, vegetables,
+                  and more — all from your phone!
+                </p>
+                <p>
+                  Skyfield-Soko, Where Harvest Meets Hustle!”Skyfield Soko –
+                  Shamba Lako, Soko Lako!
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Quality Service
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Customer
+                  Satisfaction
+                </p>
+                <p class="text-primary fw-medium">
+                  <i class="fa fa-check text-success me-2"></i>Expert support
+                </p>
+                <a href="" class="btn bg-white text-primary w-100 mt-2"
+                  >Read More<i class="fa fa-arrow-right text-secondary ms-2"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Service End -->
 
-
     <!-- About Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="text-secondary text-uppercase">About Us</h6>
-                    <h1 class="mb-4">Revolutionizing Agriculture</h1>
-                    <p class="mb-4">We provide precision farming solutions that optimize crop management and increase productivity.</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Training and expert guidance.</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Quality services at affordable prices</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Innovative solutions that improve efficiency and sustainability.</p>
-                    <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Skyfield Soko – Bid. Buy. Harvest the Future.</p>
-                        <p class="fw-medium text-primary"><i class="fa fa-check text-success me-3"></i>Skyfield Tujue Ukulima – Shamba Elimu Bila Stress!</p>
-                    <div class="bg-primary d-flex align-items-center p-4 mt-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
-                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
-                        </div>
-                        <div class="ms-3">
-                            <p class="fs-5 fw-medium mb-2 text-white">Our Helpline:</p>
-                            <h3 class="m-0 text-secondary">+254 115 037 380</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 pt-4" style="min-height: 500px;">
-                    <div class="position-relative h-100 wow fadeInUp" data-wow-delay="0.5s">
-                        <img class="position-absolute img-fluid w-100 h-100" src="dronest.jpeg" style="object-fit: cover; padding: 0 0 50px 100px;" alt="">
-                        <img class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50" src="dronest1.jpeg" style="object-fit: cover;" alt="">
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="text-secondary text-uppercase">About Us</h6>
+            <h1 class="mb-4">Revolutionizing Agriculture</h1>
+            <p class="mb-4">
+              We provide precision farming solutions that optimize crop
+              management and increase productivity.
+            </p>
+            <p class="fw-medium text-primary">
+              <i class="fa fa-check text-success me-3"></i>Training and expert
+              guidance.
+            </p>
+            <p class="fw-medium text-primary">
+              <i class="fa fa-check text-success me-3"></i>Quality services at
+              affordable prices
+            </p>
+            <p class="fw-medium text-primary">
+              <i class="fa fa-check text-success me-3"></i>Innovative solutions
+              that improve efficiency and sustainability.
+            </p>
+            <p class="fw-medium text-primary">
+              <i class="fa fa-check text-success me-3"></i>Skyfield Soko – Bid.
+              Buy. Harvest the Future.
+            </p>
+            <p class="fw-medium text-primary">
+              <i class="fa fa-check text-success me-3"></i>Skyfield Tujue
+              Ukulima – Shamba Elimu Bila Stress!
+            </p>
+            <div class="bg-primary d-flex align-items-center p-4 mt-5">
+              <div
+                class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white"
+                style="width: 60px; height: 60px"
+              >
+                <i class="fa fa-phone-alt fa-2x text-primary"></i>
+              </div>
+              <div class="ms-3">
+                <p class="fs-5 fw-medium mb-2 text-white">Our Helpline:</p>
+                <h3 class="m-0 text-secondary">+254 115 037 380</h3>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-6 pt-4" style="min-height: 500px">
+            <div
+              class="position-relative h-100 wow fadeInUp"
+              data-wow-delay="0.5s"
+            >
+              <img
+                class="position-absolute img-fluid w-100 h-100"
+                src="dronest.jpeg"
+                style="object-fit: cover; padding: 0 0 50px 100px"
+                alt=""
+              />
+              <img
+                class="position-absolute start-0 bottom-0 img-fluid bg-white pt-2 pe-2 w-50 h-50"
+                src="dronest1.jpeg"
+                style="object-fit: cover"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- About End -->
 
-
     <!-- Fact Start -->
     <div class="container-fluid fact bg-dark my-5 py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <i class="fa fa-check fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2">Maximum</h2>
-                    <p class="text-white mb-0">Yield</p>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                    <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2">Quality Services</h2>
-                    <p class="text-white mb-0">Expert Technicians</p>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                    <i class="fa fa-users fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2">Client Gain</h2>
-                    <p class="text-white mb-0">Satisfied Clients</p>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <i class="fa fa-wrench fa-2x text-white mb-3"></i>
-                    <h2 class="text-white mb-2">Environmental Impact</h2>
-                    <p class="text-white mb-0">Reduced pollution</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row g-4">
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.1s"
+          >
+            <i class="fa fa-check fa-2x text-white mb-3"></i>
+            <h2 class="text-white mb-2">Maximum</h2>
+            <p class="text-white mb-0">Yield</p>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.3s"
+          >
+            <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
+            <h2 class="text-white mb-2">Quality Services</h2>
+            <p class="text-white mb-0">Expert Technicians</p>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.5s"
+          >
+            <i class="fa fa-users fa-2x text-white mb-3"></i>
+            <h2 class="text-white mb-2">Client Gain</h2>
+            <p class="text-white mb-0">Satisfied Clients</p>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.7s"
+          >
+            <i class="fa fa-wrench fa-2x text-white mb-3"></i>
+            <h2 class="text-white mb-2">Environmental Impact</h2>
+            <p class="text-white mb-0">Reduced pollution</p>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Fact End -->
 
-
-     <!-- Team Start -->
-     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="text-secondary text-uppercase">Our Team</h6>
-                <h1 class="mb-5">The team at Skyfield</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="levy.png" alt="">
-                        </div>
-                        <div class="team-text">
-                            <div class="bg-light">
-                                <h5 class="fw-bold mb-0">Levy Nguti</h5>
-                                <small>CEO</small>
-                            </div>
-                            <div class="bg-primary">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href="https://www.instagram.com/levy.haris/profilecard/?igsh=MTdsaGc4bjh5NHd1Zw=="><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="wambui.jpg" alt="">
-                        </div>
-                        <div class="team-text">
-                            <div class="bg-light">
-                                <h5 class="fw-bold mb-0">Victoria Wambui</h5>
-                                <small>CSMO</small>
-                            </div>
-                            <div class="bg-primary">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;" src="swabir.jpeg" alt="">
-                        </div>
-                        <div class="team-text">
-                            <div class="bg-light">
-                                <h5 class="fw-bold mb-0">Swabir M. Bwana</h5>
-                                <small>CFO</small>
-                            </div>
-                            <div class="bg-primary">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="kidero.jpg" alt="">
-                        </div>
-                        <div class="team-text">
-                            <div class="bg-light">
-                                <h5 class="fw-bold mb-0">Evans Mutegi</h5>
-                                <small>COO</small>
-                            </div>
-                            <div class="bg-primary">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="granton.jpg" alt="">
-                        </div>
-                        <div class="team-text">
-                            <div class="bg-light">
-                                <h5 class="fw-bold mb-0">Granton Ojiambo</h5>
-                                <small>CTO</small>
-                            </div>
-                            <div class="bg-primary">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="adan.jpeg" alt="">
-                        </div>
-                        <div class="team-text">
-                            <div class="bg-light">
-                                <h5 class="fw-bold mb-0">Ali Adan Wako</h5>
-                                <small>H.IT</small>
-                            </div>
-                            <div class="bg-primary">
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="text-secondary text-uppercase">Our Team</h6>
+          <h1 class="mb-5">The team at Skyfield</h1>
         </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
+              <div class="position-relative overflow-hidden">
+                <img class="img-fluid" src="levy.png" alt="" />
+              </div>
+              <div class="team-text">
+                <div class="bg-light">
+                  <h5 class="fw-bold mb-0">Levy Nguti</h5>
+                  <small>CEO</small>
+                </div>
+                <div class="bg-primary">
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    class="btn btn-square mx-1"
+                    href="https://www.instagram.com/levy.haris/profilecard/?igsh=MTdsaGc4bjh5NHd1Zw=="
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="team-item">
+              <div class="position-relative overflow-hidden">
+                <img class="img-fluid" src="wambui.jpg" alt="" />
+              </div>
+              <div class="team-text">
+                <div class="bg-light">
+                  <h5 class="fw-bold mb-0">Victoria Wambui</h5>
+                  <small>CSMO</small>
+                </div>
+                <div class="bg-primary">
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="team-item">
+              <div class="position-relative overflow-hidden">
+                <img
+                  class="img-fluid"
+                  style="width: 100%; height: 100%; object-fit: cover"
+                  src="swabir.jpeg"
+                  alt=""
+                />
+              </div>
+              <div class="team-text">
+                <div class="bg-light">
+                  <h5 class="fw-bold mb-0">Swabir M. Bwana</h5>
+                  <small>CFO</small>
+                </div>
+                <div class="bg-primary">
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="team-item">
+              <div class="position-relative overflow-hidden">
+                <img class="img-fluid" src="kidero.jpg" alt="" />
+              </div>
+              <div class="team-text">
+                <div class="bg-light">
+                  <h5 class="fw-bold mb-0">Evans Mutegi</h5>
+                  <small>COO</small>
+                </div>
+                <div class="bg-primary">
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="team-item">
+              <div class="position-relative overflow-hidden">
+                <img class="img-fluid" src="granton.jpg" alt="" />
+              </div>
+              <div class="team-text">
+                <div class="bg-light">
+                  <h5 class="fw-bold mb-0">Granton Ojiambo</h5>
+                  <small>CTO</small>
+                </div>
+                <div class="bg-primary">
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="team-item">
+              <div class="position-relative overflow-hidden">
+                <img class="img-fluid" src="adan.jpeg" alt="" />
+              </div>
+              <div class="team-text">
+                <div class="bg-light">
+                  <h5 class="fw-bold mb-0">Ali Adan Wako</h5>
+                  <small>H.IT</small>
+                </div>
+                <div class="bg-primary">
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Team End -->
-        
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Address</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Mwea, Kenya</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+254 115 037 380</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>skyfield.kenya@gmail.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Opening Hours</h4>
-                    <h6 class="text-light">Monday - Friday:</h6>
-                    <p class="mb-4">08.30 AM - 05.30 PM</p>
-                    <h6 class="text-light">Saturday - Sunday:</h6>
-                    <p class="mb-0">10.00 AM - 3.00 PM</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Services</h4>
-                    <a class="btn btn-link" href="">Crop spraying</a>
-                    <a class="btn btn-link" href="">Fertilizer application</a>
-                    <a class="btn btn-link" href="">crop monitoring</a>
-                    <a class="btn btn-link" href="">Marketing advices </a>
-                    <a class="btn btn-link" href="">Expert support</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Revolutionizing agriculture</h4>
-                    <p>You are welcomed to do your farming activities with Skyfield Aerotech, the move towards quality yields.</p>
-                    
-                </div>
+    <div
+      class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Address</h4>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>Mwea, Kenya
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+254 115 037 380
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>skyfield.kenya@gmail.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Opening Hours</h4>
+            <h6 class="text-light">Monday - Friday:</h6>
+            <p class="mb-4">08.30 AM - 05.30 PM</p>
+            <h6 class="text-light">Saturday - Sunday:</h6>
+            <p class="mb-0">10.00 AM - 3.00 PM</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Services</h4>
+            <a class="btn btn-link" href="">Crop spraying</a>
+            <a class="btn btn-link" href="">Fertilizer application</a>
+            <a class="btn btn-link" href="">crop monitoring</a>
+            <a class="btn btn-link" href="">Marketing advices </a>
+            <a class="btn btn-link" href="">Expert support</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-light mb-4">Revolutionizing agriculture</h4>
+            <p>
+              You are welcomed to do your farming activities with Skyfield
+              Aerotech, the move towards quality yields.
+            </p>
+          </div>
         </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <p class="border-bottom"> &copy;2025 Skyfield Aerotech. All Right Reserved.</p>
-                    </div>
-                 
-                </div>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              <p class="border-bottom">
+                &copy;2025 Skyfield Aerotech. All Right Reserved.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -506,6 +770,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
