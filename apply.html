@@ -3,61 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skyfield Aerotech Application</title>
+    <title>Join Skyfield Aerotech</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <style>
-      body {
-        font-family: "Inter", sans-serif;
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url("https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy")
-            no-repeat center/cover;
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: #000;
+        background: #fff;
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        background: url("https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy")
+          center/cover fixed no-repeat;
+        height: 80vh;
         display: flex;
-        justify-content: center;
         align-items: center;
-        min-height: 100vh;
+        justify-content: center;
+        text-align: center;
         color: #fff;
       }
-      .form-wrapper {
-        width: 90%;
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+      }
+      .hero-content h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+      .hero-content p {
+        font-size: 1.25rem;
+      }
+
+      /* Section Container */
+      .section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+      .section h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+      }
+
+      /* What We Offer */
+      .offers {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+      .offer-card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      .offer-card:hover {
+        transform: translateY(-5px);
+      }
+      .offer-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+      }
+      .offer-card p {
+        font-size: 0.95rem;
+        color: #444;
+      }
+
+      /* Application Form */
+      .form-container {
         max-width: 1000px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(15px) saturate(180%);
-        -webkit-backdrop-filter: blur(15px) saturate(180%);
-        border-radius: 24px;
-        padding: 40px;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        margin: 0 auto;
+      }
+      form.form-wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 60px;
-        position: relative;
+        background: #fff;
+        padding: 40px;
+        border-radius: 24px;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.05);
       }
       .logo {
         grid-column: span 2;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
       .logo img {
         max-width: 120px;
         border-radius: 12px;
       }
-      h2 {
+      form h2 {
         grid-column: span 2;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         font-size: 28px;
-        font-weight: 600;
-        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-      }
-      a {
-        text-align: center;
-        text-decoration: none;
-        grid-column: span 2;
-        color: #991b1b;
         font-weight: 600;
       }
       .form-section {
@@ -67,8 +128,8 @@
       }
       label {
         font-weight: 600;
-        margin-bottom: 6px;
         font-size: 14px;
+        margin-bottom: 5px;
       }
       input,
       select,
@@ -76,20 +137,19 @@
         width: 100%;
         padding: 12px 14px;
         border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid #ccc;
+        background: #f9f9f9;
         font-size: 14px;
-        color: #111;
+        color: #000;
         transition: 0.2s;
-        resize: none;
       }
       input:focus,
       select:focus,
       textarea:focus {
         outline: none;
         border-color: #2563eb;
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
-        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+        background: #fff;
       }
       textarea {
         min-height: 120px;
@@ -98,7 +158,6 @@
       .radio-group {
         display: flex;
         gap: 15px;
-        align-items: center;
         flex-wrap: wrap;
         font-size: 14px;
       }
@@ -113,12 +172,11 @@
         color: #fff;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.5);
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
       }
       .submit-btn:hover {
         background: linear-gradient(135deg, #1e40af, #1e3a8a);
         transform: translateY(-3px);
-        box-shadow: 0 10px 24px rgba(37, 99, 235, 0.6);
       }
       .success,
       .error {
@@ -130,123 +188,167 @@
         display: none;
       }
       .success {
-        background: rgba(16, 185, 129, 0.3);
+        background: rgba(16, 185, 129, 0.15);
         color: #065f46;
       }
       .error {
-        background: rgba(239, 68, 68, 0.3);
+        background: rgba(239, 68, 68, 0.15);
         color: #991b1b;
         white-space: pre-wrap;
       }
     </style>
   </head>
   <body>
-    <form class="form-wrapper" id="appForm">
-      <div class="logo">
-        <img src="logo.png" alt="Skyfield Aerotech Logo" />
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Join Skyfield Aerotech</h1>
+        <p>Be part of the team revolutionizing agri-tech through innovation</p>
       </div>
-      <a href="https://www.skyfieldaerotech.co.ke/"
-        ><h4>Go back to homepage</h4></a
-      >
-      <h2>Join Skyfield Aerotech</h2>
+    </section>
 
-      <div class="form-section">
-        <label>First Name *</label
-        ><input type="text" id="firstName" required /> <label>Middle Name</label
-        ><input type="text" id="middleName" /> <label>Last Name *</label
-        ><input type="text" id="lastName" required /> <label>Email *</label
-        ><input
-          type="email"
-          id="email"
-          placeholder="you@example.com"
-          required
-        />
-        <label>Phone Number *</label
-        ><input
-          type="tel"
-          id="phone"
-          pattern="(\+2547\d{8}|07\d{8})"
-          placeholder="+2547XXXXXXXX or 07XXXXXXXX"
-          required
-        />
-        <label>Gender *</label>
-        <select id="gender" required>
-          <option value="">-- Select --</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
-        </select>
-      </div>
-
-      <div class="form-section">
-        <label>Position of Interest *</label
-        ><select id="position" required></select>
-        <label>Why are you interested? * <small>(max 250 words)</small></label>
-        <textarea id="why" required></textarea>
-        <div
-          id="why-count"
-          style="font-size: 12px; color: #ddd; margin-top: 4px"
-        ></div>
-        <label>Skills and Experience *</label
-        ><textarea id="skills" required></textarea> <label>Upload CV *</label
-        ><input type="file" id="resume" accept=".pdf,.doc,.docx" required />
-        <label>How did you hear about us? *</label>
-        <div class="radio-group">
-          <label
-            ><input type="radio" name="heard" value="Social Media" required />
-            Social Media</label
-          >
-          <label
-            ><input type="radio" name="heard" value="Referral" />
-            Referral</label
-          >
-          <label
-            ><input type="radio" name="heard" value="Website" /> Website</label
-          >
-          <label><input type="radio" name="heard" value="Other" /> Other</label>
+    <!-- What We Offer -->
+    <section class="section">
+      <h2>What We Offer</h2>
+      <div class="offers">
+        <div class="offer-card">
+          <h3>Innovation First</h3>
+          <p>Work with cutting-edge drone and agri-tech solutions.</p>
         </div>
-        <div class="checkbox">
-          <label
-            ><input type="checkbox" id="confirm" required /> I confirm the
-            information provided is correct.</label
-          >
+        <div class="offer-card">
+          <h3>Growth Opportunities</h3>
+          <p>Develop your skills in a fast-growing startup environment.</p>
+        </div>
+        <div class="offer-card">
+          <h3>Collaborative Team</h3>
+          <p>Join a passionate team committed to transforming agriculture.</p>
+        </div>
+        <div class="offer-card">
+          <h3>Real Impact</h3>
+          <p>See your work directly improve farmers' livelihoods.</p>
         </div>
       </div>
+    </section>
 
-      <button type="submit" class="submit-btn">Submit Application</button>
-      <div class="success">
-        ✅ Your application has been submitted successfully!
+    <!-- Application Form -->
+    <section class="section">
+      <div class="form-container">
+        <form class="form-wrapper" id="appForm">
+          <div class="logo">
+            <img src="logo.png" alt="Skyfield Aerotech Logo" />
+          </div>
+          <h2>Submit Your Application</h2>
+
+          <div class="form-section">
+            <label>First Name *</label
+            ><input type="text" id="firstName" required />
+            <label>Middle Name</label><input type="text" id="middleName" />
+            <label>Last Name *</label
+            ><input type="text" id="lastName" required /> <label>Email *</label
+            ><input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              required
+            />
+            <label>Phone Number *</label>
+            <input
+              type="tel"
+              id="phone"
+              pattern="(\+2547\d{8}|07\d{8})"
+              placeholder="+2547XXXXXXXX or 07XXXXXXXX"
+              required
+            />
+            <label>Gender *</label>
+            <select id="gender" required>
+              <option value="">-- Select --</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-section">
+            <label>Position of Interest *</label>
+            <select id="position" required></select>
+
+            <label
+              >Why are you interested? * <small>(max 250 words)</small></label
+            >
+            <textarea id="why" required></textarea>
+            <div
+              id="why-count"
+              style="font-size: 12px; color: #555; margin-top: 4px"
+            ></div>
+
+            <label>Skills and Experience *</label>
+            <textarea id="skills" required></textarea>
+
+            <label>Upload CV *</label>
+            <input type="file" id="resume" accept=".pdf,.doc,.docx" required />
+
+            <label>How did you hear about us? *</label>
+            <div class="radio-group">
+              <label
+                ><input
+                  type="radio"
+                  name="heard"
+                  value="Social Media"
+                  required
+                />
+                Social Media</label
+              >
+              <label
+                ><input type="radio" name="heard" value="Referral" />
+                Referral</label
+              >
+              <label
+                ><input type="radio" name="heard" value="Website" />
+                Website</label
+              >
+              <label
+                ><input type="radio" name="heard" value="Other" /> Other</label
+              >
+            </div>
+
+            <div class="checkbox">
+              <label
+                ><input type="checkbox" id="confirm" required /> I confirm the
+                information provided is correct.</label
+              >
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit Application</button>
+          <div class="success">
+            ✅ Your application has been submitted successfully!
+          </div>
+          <div class="error"></div>
+        </form>
       </div>
-      <div class="error"></div>
-    </form>
+    </section>
 
     <script>
       const WEB_APP_URL =
-        "https://script.google.com/macros/s/AKfycbxTbTv3QDVGZYMMzCU7j8BB_0ZdL5pzkH-peXoiomNammPjnOqkbMLboezf9DhcKrVJvg/exec"; // Replace with Apps Script URL
+        "https://script.google.com/macros/s/AKfycbxTbTv3QDVGZYMMzCU7j8BB_0ZdL5pzkH-peXoiomNammPjnOqkbMLboezf9DhcKrVJvg/exec";
 
       async function loadPositions() {
         const errEl = document.querySelector(".error");
         errEl.style.display = "none";
-
         try {
           const res = await fetch(WEB_APP_URL + "?action=getPositions");
           const data = await res.json();
-          console.log("Positions response:", data);
-
           if (
             !data ||
             data.status !== "success" ||
             !Array.isArray(data.positions)
-          ) {
+          )
             throw new Error(data.message || "No positions returned");
-          }
-
           populatePositions(data.positions);
         } catch (err) {
-          console.error("loadPositions error:", err);
           errEl.textContent = "⚠️ Could not fetch positions, loading defaults.";
           errEl.style.display = "block";
-
           populatePositions([
             "Drone Operator",
             "Agritech Specialist",
@@ -284,13 +386,7 @@
 
             if (cvFile) {
               const buffer = await cvFile.arrayBuffer();
-              cvBase64 = btoa(
-                new Uint8Array(buffer).reduce(
-                  (data, byte) => data + String.fromCharCode(byte),
-                  ""
-                )
-              );
-
+              cvBase64 = btoa(String.fromCharCode(...new Uint8Array(buffer)));
               cvType = cvFile.type;
               cvName = cvFile.name;
             }
@@ -318,23 +414,18 @@
             };
 
             const formData = new FormData();
-            for (const key in payload) {
-              formData.append(key, payload[key]);
-            }
+            for (const key in payload) formData.append(key, payload[key]);
 
             const res = await fetch(WEB_APP_URL, {
               method: "POST",
               body: formData,
             });
-
             const data = await res.json();
             if (data.status !== "success") throw new Error(data.message);
 
             document.querySelector(".success").style.display = "block";
             e.target.reset();
-            // Removed loadPositions() to prevent infinite recursion
           } catch (err) {
-            console.error("submit error:", err);
             errEl.textContent = "❌ " + (err.message || err);
             errEl.style.display = "block";
           }
