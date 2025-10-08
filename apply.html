@@ -386,10 +386,18 @@
               cvName = "";
 
             if (cvFile) {
-              const buffer = await cvFile.arrayBuffer();
-              cvBase64 = btoa(String.fromCharCode(...new Uint8Array(buffer)));
-              cvType = cvFile.type;
-              cvName = cvFile.name;
+              cvBase64 = await new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => {
+    const result = reader.result.split(",")[1]; // remove data:... prefix
+    resolve(result);
+  };
+  reader.onerror = reject;
+  reader.readAsDataURL(cvFile);
+});
+cvType = cvFile.type;
+cvName = cvFile.name;
+
             }
 
             const heardRadio = document.querySelector(
@@ -436,5 +444,6 @@
     </script>
   </body>
 </html>
+
 
 
