@@ -186,6 +186,21 @@
         color: #991b1b;
         white-space: pre-wrap;
       }
+      @media (max-width: 768px) {
+  form.form-wrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+  }
+  .submit-btn,
+  .success,
+  .error,
+  .logo,
+  form h2 {
+    grid-column: span 1;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -522,3 +537,4 @@
     </style>
   </body>
 </html>
+
